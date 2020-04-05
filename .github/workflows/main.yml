@@ -1,62 +1,62 @@
-# name: tests
+name: tests
 
-# # Controls when the action will run. Triggers the workflow on push or pull request
-# # events but only for the master branch
-# on:
-#   push:
-#     branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
-# # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-# jobs:
-#   # This workflow contains a single job called "build_latex"
-#   build_tests:
-#     name: Build tests
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Set up Git
-#         uses: actions/checkout@v2
-#       - name: Build test files
-#         run: |
-#           python3 tests/generate_all_options.py --ci-mode
-#       - name: run test builds
-#         uses: kai-tub/latex-action@kai-tub-wildcards
-#         with:
-#           working_directory: tests/tmp/
-#           compiler: "latexmk"
-#           args: "-pdf -file-line-error -interaction=nonstopmode"
-#           extra_packages: ""
-#           extra_system_packages: ""
-#   build_latex:
-#     needs: build_tests
-#     name: build document and demo-images
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Set up Git repository
-#         uses: actions/checkout@v2
-#       - name: Compile LaTeX document
-#         uses: kai-tub/latex-action@kai-tub-wildcards
-#         with:
-#           working_directory: ./
-#           compiler: "latexmk"
-#           args: "-pdf -file-line-error -interaction=nonstopmode"
-#           extra_packages: ""
-#           extra_system_packages: ""
-#       - name: build images for docs
-#         run: |
-#           mkdir -p demo-screenshots
-#           sudo mv /etc/ImageMagick-6/policy.xml /etc/ImageMagick-6/policy.xmlout
-#           convert -density 500 demo.pdf[0] demo-screenshots/example00.png
-#           convert -density 500 demo.pdf[4] demo-screenshots/example01.png
-#           convert -density 500 demo.pdf[11] demo-screenshots/example02.png
-#       - name: Commit document and demo-images
-#         run: |
-#           git config --local user.email "action@github.com"
-#           git config --local user.name "GitHub Action"
-#           git add --force demo.pdf demo-screenshots/*
-#           git commit -m "Auto-generated document and images"
-#       - name: Push LaTeX document
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build_latex"
+  build_tests:
+    name: Build tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git
+        uses: actions/checkout@v2
+      - name: Build test files
+        run: |
+          python3 tests/generate_all_options.py --ci-mode
+      - name: run test builds
+        uses: kai-tub/latex-action@kai-tub-wildcards
+        with:
+          working_directory: tests/tmp/
+          compiler: "latexmk"
+          args: "-pdf -file-line-error -interaction=nonstopmode"
+          extra_packages: ""
+          extra_system_packages: ""
+  build_latex:
+    needs: build_tests
+    name: build document and demo-images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: kai-tub/latex-action@kai-tub-wildcards
+        with:
+          working_directory: ./
+          compiler: "latexmk"
+          args: "-pdf -file-line-error -interaction=nonstopmode"
+          extra_packages: ""
+          extra_system_packages: ""
+      - name: build images for docs
+        run: |
+          mkdir -p demo-screenshots
+          sudo mv /etc/ImageMagick-6/policy.xml /etc/ImageMagick-6/policy.xmlout
+          convert -density 500 demo.pdf[0] demo-screenshots/example00.png
+          convert -density 500 demo.pdf[4] demo-screenshots/example01.png
+          convert -density 500 demo.pdf[11] demo-screenshots/example02.png
+      - name: Commit document and demo-images
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add --force demo.pdf demo-screenshots/*
+          git commit -m "Auto-generated document and images"
+      - name: Push LaTeX document
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
