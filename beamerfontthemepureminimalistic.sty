@@ -1,0 +1,41 @@
+\ProvidesPackage{beamerfontthemepureminimalistic}
+
+\RequirePackage{silence}
+% I have no clue how I can fix this warning
+\WarningFilter{latex}{Font shape declaration has incorrect series value}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[scaled]{helvet}
+\mode<presentation>
+
+\renewcommand\normalsize{\fontsize{12pt}{14pt}\selectfont}
+\renewcommand\small{\fontsize{10pt}{12pt}\selectfont}
+\renewcommand\large{\fontsize{14pt}{16pt}\selectfont}
+\renewcommand\Large{\fontsize{16pt}{18pt}\selectfont}
+
+\setbeamerfont{normal text}{family=\sffamily,size*={12pt}{14pt},series=\mdseries}
+\setbeamerfont{alerted text}{parent=normal text}
+
+\setbeamerfont{structure}{parent=normal text,series=\mdseries}
+
+\setbeamerfont{footline}{parent=structure,size*={8pt}{10pt}}
+
+\setbeamerfont{title}{size*={14pt}{16pt},parent=alerted text,shape=\scshape}
+\setbeamerfont{title in head/foot}{parent=footline,series=\bfseries}
+
+\setbeamerfont{subtitle}{parent=title,shape=\upshape}
+
+\setbeamerfont{section in toc}{parent=normal text}
+\setbeamerfont{subsection in toc}{parent=section in toc}
+\setbeamerfont{subsubsection in toc}{parent=subsection in toc}
+
+\setbeamerfont{author}{parent=normal text}
+\setbeamerfont{author in head/foot}{parent=footline}
+\setbeamerfont*{institute}{parent=normal text}
+
+\setbeamerfont{frametitle}{parent=alerted text,size*={16pt}{18pt}}
+
+\setbeamerfont*{itemize/enumerate body}{parent=normal text}
+\setbeamerfont*{itemize/enumerate subbody}{parent=itemize/enumerate body}
+\setbeamerfont*{itemize/enumerate subsubbody}{parent=itemize/enumerate subbody}
+
+\mode<all>

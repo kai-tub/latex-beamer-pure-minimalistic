@@ -1,0 +1,33 @@
+\mode<presentation>
+
+% Requirements
+\RequirePackage{tikz}
+
+\DeclareOptionBeamer{darkmode}{\PassOptionsToPackage{darkmode}{beamercolorthemepureminimalistic}}
+\DeclareOptionBeamer{showmaxslides}{\PassOptionsToPackage{showmaxslides}{beamerouterthemepureminimalistic}}
+\ProcessOptionsBeamer
+
+% Settings
+\usefonttheme{pureminimalistic}
+\usecolortheme{pureminimalistic}
+\useoutertheme{pureminimalistic}
+\useinnertheme{pureminimalistic}
+
+\setbeamertemplate{navigation symbols}{}%
+\beamerdefaultoverlayspecification{}
+
+\def\maketitle{%
+	{%Set beamer template only works for the following frames.
+	% Would need a different way to support calling \maketitle in
+	% a frame environment
+		\setbeamertemplate{footline}{}%
+		\setbeamertemplate{frametitle}[largetitle]%
+
+		\begin{frame}[noframenumbering]%
+			\titlepage%
+		\end{frame}%
+	}
+}
+
+
+\mode<all>

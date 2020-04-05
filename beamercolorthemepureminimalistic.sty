@@ -1,0 +1,55 @@
+\ProvidesPackage{beamercolorthemepureminimalistic}
+\RequirePackage{ifthen}
+\mode<presentation>
+
+\newboolean{darkmode}
+\setboolean{darkmode}{false}
+
+\DeclareOptionBeamer{darkmode}{\setboolean{darkmode}{true}}
+\ProcessOptionsBeamer
+
+\definecolor{pureminimalistic@text@black}{RGB}{0,0,0}
+\definecolor{pureminimalistic@text@gray}{RGB}{113,113,113}
+\definecolor{pureminimalistic@text@whiter_gray}{RGB}{200,200,200}
+\definecolor{pureminimalistic@text@red}{RGB}{197,14,31}
+\definecolor{pureminimalistic@text@white}{RGB}{255, 255, 255}
+
+\ifthenelse{\boolean{darkmode}}{
+  \newcommand{\beamerfgcolor}{pureminimalistic@text@white}%
+  \newcommand{\beamerbgcolor}{pureminimalistic@text@black}%
+  \newcommand{\footergray}{pureminimalistic@text@whiter_gray}%
+}{%
+  \newcommand{\beamerfgcolor}{pureminimalistic@text@black}%
+  \newcommand{\beamerbgcolor}{pureminimalistic@text@white}%
+  \newcommand{\footergray}{pureminimalistic@text@gray}%
+}
+
+\setbeamercolor*{normal text}{fg=\beamerfgcolor, bg=\beamerbgcolor}
+\setbeamercolor*{alerted text}{fg=pureminimalistic@text@red, bg=\beamerbgcolor}
+\setbeamercolor*{footline}{fg=\footergray, bg=\beamerbgcolor}
+\setbeamercolor*{frametitle}{fg=pureminimalistic@text@red, bg=\beamerbgcolor}
+
+\setbeamercolor*{author}{parent=normal text}
+\setbeamercolor*{title}{parent=frametitle}
+
+\setbeamercolor*{section in toc}{parent=normal text}
+\setbeamercolor*{subsection in toc}{parent=normal text}
+\setbeamercolor*{subsubsection in toc}{parent=normal text}
+
+\setbeamercolor*{enumerate item}{parent=normal text}
+\setbeamercolor*{enumerate subitem}{parent=normal text}
+\setbeamercolor*{enumerate subsubitem}{parent=normal text}
+
+\setbeamercolor*{itemize item}{parent=normal text}
+\setbeamercolor*{itemize subitem}{parent=normal text}
+\setbeamercolor*{itemize subsubitem}{parent=normal text}
+
+\setbeamercolor*{bibliography item}{parent=normal text}
+\setbeamercolor*{bibliography entry title}{parent=normal text}
+\setbeamercolor*{bibliography entry author}{parent=normal text}
+\setbeamercolor*{bibliography entry location}{parent=normal text}
+\setbeamercolor*{bibliography entry note}{parent=normal text}
+
+\setbeamercolor*{caption name}{parent=normal text}
+
+\mode<all>

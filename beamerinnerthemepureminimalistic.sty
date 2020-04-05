@@ -1,0 +1,68 @@
+\ProvidesPackage{beamerinnerthemepureminimalistic}
+
+\mode<presentation>
+
+\def\itemsymbol{\raisebox{0.3ex}{\small$\bullet$}}
+\let\svitem\item
+\newenvironment{vfilleditems}{%
+  \begin{itemize} %
+    \let\olditem\item
+          \renewcommand\item[1][\itemsymbol]{\vfill\svitem[##1]}}%
+          {\end{itemize}\vfill}
+
+\defbeamertemplate*{section in toc}{pureminimalistic}{%
+  \hspace{0.5em} \inserttocsectionnumber.~\inserttocsection
+}
+
+\defbeamertemplate*{subsection in toc}{pureminimalistic}{%
+  \hspace{1.5em} \inserttocsectionnumber.\inserttocsubsectionnumber~\inserttocsubsection\par
+}
+
+\defbeamertemplate*{subsubsection in toc}{pureminimalistic}{% No one should use subsubsections in a presentation
+}
+
+\defbeamertemplate*{itemize item}{pureminimalistic}{%
+  \usebeamerfont*{itemize item}\itemsymbol
+}
+
+\defbeamertemplate*{itemize subitem}{pureminimalistic}{%
+  \usebeamerfont*{itemize subitem}\itemsymbol
+}
+
+\defbeamertemplate*{itemize subsubitem}{pureminimalistic}{%
+  \usebeamerfont*{itemize subsubitem}\itemsymbol
+}
+
+\defbeamertemplate*{bibliography item}{pureminimalistic}{%
+  \insertbiblabel
+}
+
+\defbeamertemplate*{title page}{pureminimalistic}[1][]
+{
+  \usebeamerfont{title}
+  \begin{beamercolorbox}[sep=0ex,wd=\textwidth,dp=1ex]{headline}
+    \vskip 3pt
+    \hfill\logoheaderlargecommand\par%
+    \vskip 75pt
+    \parbox{\linewidth}{%
+      \begin{beamercolorbox}[wd=\textwidth]{title}%
+        {\inserttitle}%
+      \end{beamercolorbox}
+
+      \begin{beamercolorbox}[wd=\textwidth,dp=1ex]{author}%
+        \vskip 3pt
+        \small\usebeamerfont{author}\usebeamercolor{author}\insertauthor $\quad$
+        \ifx\insertinstitute\@empty%
+          \else%
+          {\usebeamerfont{institute}\insertinstitute $\quad$}%
+        \fi%
+        \ifx\insertsubtitle\@empty%
+          \else%
+          {\usebeamerfont{subtitle}\insertsubtitle}%
+        \fi%
+      \end{beamercolorbox}%
+    }%
+  \end{beamercolorbox}
+}
+
+\mode<all>
