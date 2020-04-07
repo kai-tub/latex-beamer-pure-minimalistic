@@ -1,9 +1,9 @@
 # Pure Minimalistic Theme
-[![Generic badge](https://img.shields.io/github/release/kai-tub/latex_beamer_pure_minimalistic)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases) 
-[![GitHub license](https://img.shields.io/github/license/kai-tub/latex_beamer_pure_minimalistic?color=blue)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/blob/master/LICENSE)
+[![Release](https://badgen.net/github/tag/kai-tub/latex_beamer_pure_minimalistic/?label=Newest%20release)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases) 
+[![GitHub license](https://badgen.net/github/license/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/blob/master/LICENSE)
 
-![build](https://github.com/kai-tub/latex_beamer_pure_minimalistic/workflows/tests/badge.svg?branch=master&event=push)
-![issues](https://img.shields.io/github/issues/kai-tub/latex_beamer_pure_minimalistic)
+![build](https://badgen.net/github/checks/kai-tub/latex_beamer_pure_minimalistic/master?label=tests&icon=github)
+![issues](https://badgen.net/github/open-issues/kai-tub/latex_beamer_pure_minimalistic/?icon=github)
 
 
 A presentation theme for LaTeX-Beamer that is truly
