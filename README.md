@@ -61,11 +61,10 @@ your logo is to replace these files and, if necessary, modify
 the code where the figures are included in the
 `beamerouterthemepureminimalistic.sty` file.
 
-## Current TODOs
-- Not perfect logo options support, mainly due to the problem
-of creating an easy interface (help or comments are welcome!)
-- No easy way to install globally
-- Few options
+## Release status
+The next steps and thoughts about the next release
+with possible features can be seen on the [project
+page](https://github.com/kai-tub/latex_beamer_pure_minimalistic/projects/1). 
 
 # License
 This software is released under the GNU GPL v3.0 
