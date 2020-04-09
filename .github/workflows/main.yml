@@ -54,7 +54,7 @@ jobs:
           sudo mv /etc/ImageMagick-6/policy.xml /etc/ImageMagick-6/policy.xmlout
           convert -density 500 demo.pdf[0] demo-screenshots/example00.png
           convert -density 500 demo.pdf[4] demo-screenshots/example01.png
-          convert -density 500 demo.pdf[11] demo-screenshots/example02.png
+          convert -density 500 demo.pdf[12] demo-screenshots/example02.png
       - name: Commit document and demo-images
         run: |
           git config --local user.email "action@github.com"
