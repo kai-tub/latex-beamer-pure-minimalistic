@@ -16,45 +16,63 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build_latex"
-  build_tests:
-    name: Build tests
+  build_and_run_tests:
+    name: Build and run tests
     runs-on: ubuntu-latest
+    container:
+      image: xucheng/texlive-small:latest
+      # This setting works for GitHub but doesn't work for the local act version yet
+      # To still be able to run the tests locally, I will configure the shells
+      # on a per run basis
+      defaults:
+        run:
+          shell: sh
     steps:
-      - name: Set up Git
+      - name: Set up repo
         uses: actions/checkout@v2
       - name: Build test files
         run: |
           python3 tests/generate_all_options.py --ci-mode
-      - name: run test builds
-        uses: kai-tub/latex-action@kai-tub-wildcards
+        shell: sh
+      - name: Install missing packages
+        run: |
+          tlmgr install silence
+          tlmgr install appendixnumberbeamer
+        shell: sh
+      - name: Run tests
+        working-directory: tests/tmp/
+        run: |
+         latexmk -pdf -file-line-error -interaction=nonstopmode *.tex
+        shell: sh
+      - name: Build demo document
+        run: |
+          latexmk -pdf -file-line-error -interaction=nonstopmode demo.tex
+        shell: sh
+      - name: Upload demo document as artifact
+        uses: actions/upload-artifact@v2
         with:
-          working_directory: tests/tmp/
-          compiler: "latexmk"
-          args: "-pdf -file-line-error -interaction=nonstopmode"
-          extra_packages: ""
-          extra_system_packages: ""
-  build_latex:
-    needs: build_tests
-    name: build document and demo-images
+          name: demo.pdf
+          path: demo.pdf
+
+  build_docs:
+    name: Build documentation
     runs-on: ubuntu-latest
+    needs: build_and_run_tests
     steps:
-      - name: Set up Git repository
+      - name: Set up repo
         uses: actions/checkout@v2
-      - name: Compile LaTeX document
-        uses: kai-tub/latex-action@kai-tub-wildcards
-        with:
-          working_directory: ./
-          compiler: "latexmk"
-          args: "-pdf -file-line-error -interaction=nonstopmode"
-          extra_packages: ""
-          extra_system_packages: ""
-      - name: build images for docs
+      - name: Download demo.pdf
+        uses: actions/download-artifact@v2
+        with: demo.pdf
+      - name: Build images for docs
         run: |
           mkdir -p demo-screenshots
           sudo mv /etc/ImageMagick-6/policy.xml /etc/ImageMagick-6/policy.xmlout
           convert -density 500 demo.pdf[0] demo-screenshots/example00.png
           convert -density 500 demo.pdf[4] demo-screenshots/example01.png
           convert -density 500 demo.pdf[12] demo-screenshots/example02.png
+      - name: Test
+        run: file demo-screenshots/example00.png
       - name: Commit document and demo-images
         run: |
           git config --local user.email "action@github.com"
