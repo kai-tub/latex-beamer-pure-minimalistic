@@ -73,14 +73,17 @@ jobs:
           convert -density 500 demo.pdf[0] demo-screenshots/example00.png
           convert -density 500 demo.pdf[4] demo-screenshots/example01.png
           convert -density 500 demo.pdf[12] demo-screenshots/example02.png
-      - name: Commit document and demo-images
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add --force demo.pdf demo-screenshots/*
-          git commit -m "Auto-generated document and images"
+#       - name: Commit document and demo-images
+#         run: |
+#           git config --local user.email "action@github.com"
+#           git config --local user.name "GitHub Action"
+#           git add --force demo.pdf demo-screenshots/*
+#           git commit -m "Auto-generated document and images"
       - name: Push LaTeX document
-        uses: ad-m/github-push-action@master
+        uses: stefanzweifel/git-auto-commit-action@v2.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.head_ref }}
+          commit_author_email: ''
+          commit_author_name: AutoDoc
+          commit_message: automatically update docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
