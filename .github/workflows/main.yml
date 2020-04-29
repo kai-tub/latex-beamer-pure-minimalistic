@@ -24,9 +24,9 @@ jobs:
       # This setting works for GitHub but doesn't work for the local act version yet
       # To still be able to run the tests locally, I will configure the shells
       # on a per run basis
-      defaults:
-        run:
-          shell: sh
+    defaults:
+      run:
+        shell: sh
     steps:
       - name: Set up repo
         uses: actions/checkout@v2
@@ -53,7 +53,7 @@ jobs:
         with:
           name: demo.pdf
           path: demo.pdf
-  # try to restart engine
+
   build_docs:
     name: Build documentation
     runs-on: ubuntu-latest
