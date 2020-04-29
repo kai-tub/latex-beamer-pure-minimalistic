@@ -73,8 +73,6 @@ jobs:
           convert -density 500 demo.pdf[0] demo-screenshots/example00.png
           convert -density 500 demo.pdf[4] demo-screenshots/example01.png
           convert -density 500 demo.pdf[12] demo-screenshots/example02.png
-      - name: Test
-        run: file demo-screenshots/example00.png
       - name: Commit document and demo-images
         run: |
           git config --local user.email "action@github.com"
@@ -85,3 +83,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.head_ref }}
