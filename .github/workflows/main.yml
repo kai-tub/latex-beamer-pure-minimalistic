@@ -64,7 +64,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Download demo.pdf
         uses: actions/download-artifact@v2
-        with: demo.pdf
+        with: 
+          name: demo.pdf
       - name: Build images for docs
         run: |
           mkdir -p demo-screenshots
