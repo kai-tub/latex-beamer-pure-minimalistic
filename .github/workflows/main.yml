@@ -80,7 +80,7 @@ jobs:
 #           git add --force demo.pdf demo-screenshots/*
 #           git commit -m "Auto-generated document and images"
       - name: Push LaTeX document
-        uses: stefanzweifel/git-auto-commit-action@v2.0.0
+        uses: stefanzweifel/git-auto-commit-action@v4.1.6
         with:
           commit_author_email: ''
           commit_author_name: AutoDoc
