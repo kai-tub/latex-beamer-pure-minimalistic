@@ -15,8 +15,7 @@ not on the slides.
 
 ## Main goals
 - No warnings are produced by the theme
-- It should be looking *good* in a 4:3 and 16:9 aspect
-ratio, without the need to change anything.
+- It should be looking *good* in a 4:3 and 16:9 aspect ratio, without the need to change anything.
 - Provides an environment for vertical-spaced items
 - Easy option to either use normal- or dark-mode
 - Is designed to be purely minimalistic without any distractions 
