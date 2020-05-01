@@ -80,8 +80,11 @@ jobs:
           mkdir -p docs
           mv demo-screenshots docs/
           mv demo.pdf docs/demo-screenshots
+      - name: Show docs
+        run: |
+          ls docs/
       - name: Upload Documentation to wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        uses: SwiftDocOrg/github-wiki-publish-action@master
         with:
           path: "docs"
         env:
