@@ -2,6 +2,8 @@
 
 [![Release](https://badgen.net/github/tag/kai-tub/latex_beamer_pure_minimalistic/?label=Newest%20release)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases) 
 [![GitHub license](https://badgen.net/github/license/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/blob/master/LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?color=blue)](CODE_OF_CONDUCT.md)
+
 
 
 ![tests](https://github.com/kai-tub/latex_beamer_pure_minimalistic/workflows/tests/badge.svg?branch=master&event=push)
@@ -12,7 +14,7 @@ minimalistic, so that the focus is on the presenter and
 not on the slides.
 
 ## Main goals
-- No errors or warnings are produced by the theme
+- No warnings are produced by the theme
 - It should be looking *good* in a 4:3 and 16:9 aspect
 ratio, without the need to change anything.
 - Provides an environment for vertical-spaced items
@@ -69,6 +71,11 @@ page](https://github.com/kai-tub/latex_beamer_pure_minimalistic/projects/1).
 # License
 This software is released under the GNU GPL v3.0 
 [License](LICENSE).
+
+# Contributing
+Please see the [contribution guidelines](CONTRIBUTING.md) for more information.
+
+As always, PRs are welcome. :)
 
 # Contact
 If you have any comments, issues or suggestions, please
