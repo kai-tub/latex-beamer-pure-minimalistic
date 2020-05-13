@@ -83,7 +83,7 @@ jobs:
       - name: Upload Documentation to wiki
         uses: kai-tub/external-repo-sync-action@master
         with:
-          source-dir: "docs/"
+          source-directory: "docs/"
           include-pattern: "*.png *.pdf "
           commit-message: "Updating LaTeX documentation"
         env:
