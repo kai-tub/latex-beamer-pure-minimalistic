@@ -80,19 +80,11 @@ jobs:
           mkdir -p docs
           mv demo-screenshots docs/
           mv demo.pdf docs/demo-screenshots
-      - name: Show docs
-        run: |
-          ls docs/
       - name: Upload Documentation to wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@master
+        uses: kai-tub/external-repo-sync-action@master
         with:
-          path: "docs"
+          source-dir: "docs/"
+          include-pattern: "*.png *.pdf"
+          commit-message: "Updating LaTeX documentation"
         env:
-          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-      # - name: Push LaTeX document
-      #   uses: stefanzweifel/git-auto-commit-action@v4.1.6
-      #   with:
-      #     commit_message: Update documentation
-      #     branch: ${{ github.head_ref }}
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
