@@ -84,7 +84,7 @@ jobs:
         uses: kai-tub/external-repo-sync-action@master
         with:
           source-dir: "docs/"
-          include-pattern: "*.png *.pdf"
+          include-pattern: "*.png *.pdf "
           commit-message: "Updating LaTeX documentation"
         env:
           GH_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
