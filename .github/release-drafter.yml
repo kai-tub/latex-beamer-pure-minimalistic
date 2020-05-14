@@ -1,3 +1,21 @@
+name-template: 'v$NEXT_MINOR_VERSION'
+tag-template: 'v$NEXT_MINOR_VERSION'
+version-template: '$MAJOR.$MINOR.$PATCH'
+no-changes-template: '🍪 New changes are coming soon 🍪'
+pre-release: true
+categories:
+  - title: '💣🎇Features'
+    labels:
+      - 'feature'
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'bug'
+      - 'fix'
+  - title: '📃 Documentation'
+    labels:
+      - 'documentation'
+
 template: |
   ## What's new
 
