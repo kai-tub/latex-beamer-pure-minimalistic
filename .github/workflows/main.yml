@@ -79,7 +79,7 @@ jobs:
         run: |
           mkdir -p docs
           mv demo-screenshots docs/
-          mv demo.pdf docs/demo-screenshots
+          mv demo.pdf docs/
       - name: Upload Documentation to wiki
         uses: kai-tub/external-repo-sync-action@master
         with:
