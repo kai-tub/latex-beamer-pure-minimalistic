@@ -22,9 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: xucheng/texlive-small:latest
-      # This setting works for GitHub but doesn't work for the local act version yet
-      # To still be able to run the tests locally, I will configure the shells
-      # on a per run basis
     defaults:
       run:
         shell: sh
@@ -34,21 +31,17 @@ jobs:
       - name: Build test files
         run: |
           python3 tests/generate_all_options.py --ci-mode
-        shell: sh
       - name: Install missing packages
         run: |
           tlmgr install silence
           tlmgr install appendixnumberbeamer
-        shell: sh
       - name: Run tests
         working-directory: tests/tmp/
         run: |
          latexmk -pdf -file-line-error -interaction=nonstopmode *.tex
-        shell: sh
       - name: Build demo document
         run: |
           latexmk -pdf -file-line-error -interaction=nonstopmode demo.tex
-        shell: sh
       - name: Upload demo document as artifact
         uses: actions/upload-artifact@v2
         with:
