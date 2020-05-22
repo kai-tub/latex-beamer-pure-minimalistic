@@ -289,3 +289,4 @@ TSWLatexianTemp*
 *.tar.gz
 *.zip
 tmp/
+latex-beamer-pure-minimalistic.wiki/
