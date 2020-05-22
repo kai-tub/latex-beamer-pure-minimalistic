@@ -1,19 +1,29 @@
-# ![Pure Minimalistic Theme](logos/institute_logo_darkmode.png)
+<div align="center">
+![Pure Minimalistic Theme](logos/institute_logo_darkmode.png)
 
 [![Release](https://badgen.net/github/tag/kai-tub/latex_beamer_pure_minimalistic/?label=Newest%20release)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases) 
 [![GitHub license](https://badgen.net/github/license/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/blob/master/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?color=blue)](CODE_OF_CONDUCT.md)
 
-
-
 ![tests](https://github.com/kai-tub/latex_beamer_pure_minimalistic/workflows/tests/badge.svg?branch=master&event=push)
-
 
 A presentation theme for LaTeX-Beamer that is truly
 minimalistic, so that the focus is on the presenter and
 not on the slides.
+</div>
 
-## Main goals
+**Table of contents:**
+- [Main goals](#main-goals)
+- [Demo](#demo)
+- [Download](#download)
+- [Instructions](#instructions)
+- [Customize Logos](#customize-logos)
+- [Release status](#release-status)
+- [License](#license)
+- [Contributing](#contributing)
+- [Contact](#contact)
+
+# Main goals
 - No warnings are produced by the theme
 - It should be looking *good* in a 4:3 and 16:9 aspect ratio, without the need to change anything.
 - Provides an environment for vertical-spaced items
@@ -22,7 +32,7 @@ not on the slides.
 - Easily use own logos (partly functional)
   
 
-## Demo
+# Demo
 A sample document can be seen in [demo.pdf](demo.pdf), produced
 from [demo.tex](demo.tex).
 The document shows all of the
@@ -38,9 +48,9 @@ To add videos to the presentation, [pympress](https://github.com/Cimbali/pympres
 This presentation tool works perfectly with
 Beamer presentations and is available on all major OS!
 
-![example-slide00](demo-screenshots/example00.png)
-![example-slide01](demo-screenshots/example01.png)
-![example-slide02](demo-screenshots/example02.png)
+![example-slide00](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/demo-screenshots/example00.png)
+![example-slide01](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/demo-screenshots/example01.png)
+![example-slide02](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/demo-screenshots/example02.png)
 
 # Download
 Download the latest release by going to the [release page](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases).
@@ -55,14 +65,14 @@ LaTeX source file. Then include the theme by writing
 \usetheme[]{pureminimalistic}
 ```
  
-## Customize Logos
+# Customize Logos
 Right now the theme expects the logos to be present in a
 folder `logos` with the names: `header_logo`, `header_logo_darkmode`, `institute_logo` and `institute_logo_darkmode`. Currently, the best way to include
 your logo is to replace these files and, if necessary, modify
 the code where the figures are included in the
 `beamerouterthemepureminimalistic.sty` file.
 
-## Release status
+# Release status
 The next steps and thoughts about the next release
 with possible features can be seen on the [project
 page](https://github.com/kai-tub/latex_beamer_pure_minimalistic/projects/1). 
