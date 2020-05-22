@@ -22,9 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: xucheng/texlive-small:latest
-      # This setting works for GitHub but doesn't work for the local act version yet
-      # To still be able to run the tests locally, I will configure the shells
-      # on a per run basis
     defaults:
       run:
         shell: sh
@@ -34,21 +31,17 @@ jobs:
       - name: Build test files
         run: |
           python3 tests/generate_all_options.py --ci-mode
-        shell: sh
       - name: Install missing packages
         run: |
           tlmgr install silence
           tlmgr install appendixnumberbeamer
-        shell: sh
       - name: Run tests
         working-directory: tests/tmp/
         run: |
          latexmk -pdf -file-line-error -interaction=nonstopmode *.tex
-        shell: sh
       - name: Build demo document
         run: |
           latexmk -pdf -file-line-error -interaction=nonstopmode demo.tex
-        shell: sh
       - name: Upload demo document as artifact
         uses: actions/upload-artifact@v2
         with:
@@ -75,16 +68,16 @@ jobs:
           convert -density 500 demo.pdf[0] demo-screenshots/example00.png
           convert -density 500 demo.pdf[4] demo-screenshots/example01.png
           convert -density 500 demo.pdf[12] demo-screenshots/example02.png
-#       - name: Commit document and demo-images
-#         run: |
-#           git config --local user.email "action@github.com"
-#           git config --local user.name "GitHub Action"
-#           git add --force demo.pdf demo-screenshots/*
-#           git commit -m "Auto-generated document and images"
-      - name: Push LaTeX document
-        uses: stefanzweifel/git-auto-commit-action@v4.1.6
+      - name: Move to docs folder
+        run: |
+          mkdir -p docs
+          mv demo-screenshots docs/
+          mv demo.pdf docs/
+      - name: Upload Documentation to wiki
+        uses: kai-tub/external-repo-sync-action@v1
         with:
-          commit_message: Update documentation
-          branch: ${{ github.head_ref }}
+          source-directory: "docs/"
+          include-pattern: "*.png *.pdf "
+          commit-message: "Updating LaTeX documentation"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
