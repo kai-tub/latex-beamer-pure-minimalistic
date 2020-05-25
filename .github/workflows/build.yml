@@ -36,7 +36,7 @@ jobs:
           echo $(pwd)
       - name: Add pureminimalistic to TEXINPUTS
         run: |
-          export TEXINPUTS="$GITHUB_WORKSPACE":
+          export TEXINPUTS="$GITHUB_WORKSPACE"//:
       - name: Build minimal examples
         working-directory: minimal_examples/
         run: |
