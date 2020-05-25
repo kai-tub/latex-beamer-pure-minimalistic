@@ -53,8 +53,8 @@ jobs:
         uses: kai-tub/external-repo-sync-action@v1
         with:
           source-directory: "./"
-          include-pattern: "demo.pdf *.png"
-          exlcude-pattern: "*.tmp.png"
+          include-patterns: "demo.pdf *.png"
+          exlcude-patterns: "*.tmp.png"
           commit-message: "Updating LaTeX documentation files"
           dry-run: true
         env:
