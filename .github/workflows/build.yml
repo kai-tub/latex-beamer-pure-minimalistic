@@ -54,33 +54,11 @@ jobs:
         with:
           source-directory: "./"
           include-patterns: "demo.pdf *.png"
-          exlcude-patterns: "*.tmp.png"
+          exclude-patterns: "*.tmp.png"
           commit-message: "Updating LaTeX documentation files"
           dry-run: true
         env:
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
       - name: Break pipeline
         run: exit 1
-      # Build script for conersion of all filesz
-      # - name: Convert minimal example PDFs to PNGs
-      #   run: |
-      # - name: Build images for docs
-      #   run: |
-      #     mkdir -p demo-screenshots
-      #     sudo mv /etc/ImageMagick-6/policy.xml /etc/ImageMagick-6/policy.xmlout
-      #     convert -density 500 demo.pdf demo-screenshots/tmp-%02d.png
-      #     montage demo-screenshots/tmp-*.png -geometry +2+2 -tile x2 -background none demo-screenshots.png
-      # - name: Move to docs folder
-      #   run: |
-      #     mkdir -p docs
-      #     mv demo-screenshots docs/
-      #     mv demo.pdf docs/
-      # - name: Upload Documentation to wiki
-      #   uses: kai-tub/external-repo-sync-action@v1
-      #   with:
-      #     source-directory: "docs/"
-      #     include-pattern: "*.png *.pdf"
-      #     exclude-pattern: "*tmp*"
-      #     commit-message: "Updating LaTeX documentation"
-      #   env:
-      #     GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+
