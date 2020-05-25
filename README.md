@@ -15,6 +15,9 @@ not on the slides.
 **Table of contents:**
 - [Main goals](#main-goals)
 - [Demo](#demo)
+- [Comparison](#comparison)
+  - [Dark mode](#dark-mode)
+  - [Light mode](#light-mode)
 - [Download](#download)
 - [Instructions](#instructions)
 - [Customize Logos](#customize-logos)
@@ -22,8 +25,6 @@ not on the slides.
   - [Fonts](#fonts)
   - [Color](#color)
   - [Footer options](#footer-options)
-    - [Show max slide numbers](#show-max-slide-numbers)
-    - [Disable footer](#disable-footer)
 - [Release status](#release-status)
 - [License](#license)
 - [Contributing](#contributing)
@@ -50,14 +51,26 @@ including backup slides to the total frame counter.
 Please use [demo.tex](demo.tex)
 as a starting point, as exhaustive comments
 were added to hopefully make everything very clear.
+<!-- TODO Add a picture for the demo.pdf, for a quicker glance -->
 
 To add videos to the presentation, [pympress](https://github.com/Cimbali/pympress) is highly recommended.
 This presentation tool works perfectly with
 Beamer presentations and is available on all major OS!
 
-![example-slide00](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/demo-screenshots/example00.png)
-![example-slide01](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/demo-screenshots/example01.png)
-![example-slide02](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/demo-screenshots/example02.png)
+# Comparison
+To show some differences between the default LaTeX beamer
+theme and the pure minimalistic beamer theme:
+
+## Dark mode
+On the left is the pure minimalistic theme in dark mode,
+and on the right is the default beamer theme.
+![comparison-dark](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png)
+
+## Light mode
+On the left is the pure minimalistic theme in light mode,
+and on the right is the default beamer theme.
+
+![comparison-light](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png)
 
 # Download
 Download the latest release by going to the [release page](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases).
@@ -141,7 +154,8 @@ could be used:
 
 ## Footer options
 
-### Show max slide numbers
+**Show max slide numbers**
+
 To show the maximum number of slides, enable the
 `showmaxslides` option:
 
@@ -149,7 +163,8 @@ To show the maximum number of slides, enable the
 \usetheme[showmaxslides]{pureminimalistic}
 ```
 
-### Disable footer
+**Disable footer**
+
 To disable the footer altogether, including the institute image,
 set the `nofooter` option:
 
