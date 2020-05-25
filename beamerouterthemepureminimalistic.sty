@@ -29,7 +29,12 @@
 \newboolean{showmaxslides}
 \setboolean{showmaxslides}{false}
 
+\newboolean{nofooter}
+\setboolean{nofooter}{false}
+
 \DeclareOptionBeamer{showmaxslides}{\setboolean{showmaxslides}{true}}
+\DeclareOptionBeamer{nofooter}{\setboolean{nofooter}{true}}
+
 \ProcessOptionsBeamer
 
 % invertcolor is already processed in colortheme
@@ -84,18 +89,19 @@
 }%
 
 \defbeamertemplate*{footline}{pureminimalisticfooter}{%
-  \leavevmode
-  \begin{beamercolorbox}[sep=0pt, wd=\myleftmargin, ht=\myfooterheight, dp=1ex]{footline}
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[sep=0pt, wd=\mytextlength, ht=\myfooterheight, dp=1ex]{footline}
-    \parbox{\linewidth}%
-    % Don't ask me why I had to insert a space/character after \usebeamercolor
-    % for it to have an effect on \hrule. Same goes for \color{white} \hrule
-    { \usebeamercolor[fg]{normal text}\ \hrule }
+  \ifthenelse{\boolean{nofooter}}{}{%
     \leavevmode
-    \begin{beamercolorbox}[sep=0mm, wd=.6\paperwidth, ht=\myfooterheight]{footline}%
-      \usebeamerfont{footline}%
-      \vbox to\myfooterheight{%
+    \begin{beamercolorbox}[sep=0pt, wd=\myleftmargin, ht=\myfooterheight, dp=1ex]{footline}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[sep=0pt, wd=\mytextlength, ht=\myfooterheight, dp=1ex]{footline}
+      \parbox{\linewidth}%
+      % Don't ask me why I had to insert a space/character after \usebeamercolor
+      % for it to have an effect on \hrule. Same goes for \color{white} \hrule
+      { \usebeamercolor[fg]{normal text}\ \hrule }
+      \leavevmode
+      \begin{beamercolorbox}[sep=0mm, wd=.6\paperwidth, ht=\myfooterheight]{footline}%
+        \usebeamerfont{footline}%
+        \vbox to\myfooterheight{%
         \vfil%
         \insertshorttitle{} $~|~$ %
         \insertshortauthor{} $\quad$ %
@@ -106,19 +112,20 @@
         {}\par%
         \vfil%
         \vfil%
-      }%
+        }%
       \end{beamercolorbox}%
       \begin{beamercolorbox}[sep=0mm, wd=.275\paperwidth,right, ht=\myfooterheight]{footline}
         \vbox to\myfooterheight{%
-          \vfil%
-          \logofootercommand
-          \vfil%
-          \vfil%
+        \vfil%
+        \logofootercommand
+        \vfil%
+        \vfil%
         }%
       \end{beamercolorbox}%
     \end{beamercolorbox}%
-  \begin{beamercolorbox}[sep=0pt, wd=\myrightmargin, dp=1ex, ht=\myfooterheight]{footline}
-  \end{beamercolorbox}
-}
-
+    \begin{beamercolorbox}[sep=0pt, wd=\myrightmargin, dp=1ex, ht=\myfooterheight]{footline}
+    \end{beamercolorbox}
+    }
+  }
+  
 \mode<all>

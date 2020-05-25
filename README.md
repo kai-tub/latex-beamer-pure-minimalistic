@@ -1,6 +1,6 @@
 <div align="center">
-![Pure Minimalistic Theme](logos/institute_logo_darkmode.png)
 
+![Pure Minimalistic Theme](logos/institute_logo_darkmode.png)
 [![Release](https://badgen.net/github/tag/kai-tub/latex_beamer_pure_minimalistic/?label=Newest%20release)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases) 
 [![GitHub license](https://badgen.net/github/license/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/blob/master/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?color=blue)](CODE_OF_CONDUCT.md)
@@ -18,6 +18,12 @@ not on the slides.
 - [Download](#download)
 - [Instructions](#instructions)
 - [Customize Logos](#customize-logos)
+- [Options](#options)
+  - [Fonts](#fonts)
+  - [Color](#color)
+  - [Footer options](#footer-options)
+    - [Show max slide numbers](#show-max-slide-numbers)
+    - [Disable footer](#disable-footer)
 - [Release status](#release-status)
 - [License](#license)
 - [Contributing](#contributing)
@@ -33,8 +39,9 @@ not on the slides.
   
 
 # Demo
-A sample document can be seen in [demo.pdf](demo.pdf), produced
-from [demo.tex](demo.tex).
+A sample document can be seen in the
+[demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf),
+produced from [demo.tex](demo.tex).
 The document shows all of the
 design decisions, as well as some packages and commands that
 work well for presentations. For example, starting the
@@ -71,6 +78,84 @@ folder `logos` with the names: `header_logo`, `header_logo_darkmode`, `institute
 your logo is to replace these files and, if necessary, modify
 the code where the figures are included in the
 `beamerouterthemepureminimalistic.sty` file.
+
+# Options
+
+All options are also described in detail in the
+[demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf).
+
+## Fonts
+The default fonts are the [Fira Fonts](https://bboxtype.com/typefaces/FiraSans/#!layout=specimen). 
+This decision was inspired from another awesome beamer theme,
+the [Focus beamer theme](https://github.com/elauksap/focus-beamertheme).
+
+Some dislike the Fira Fonts. As an alternative this
+theme also integrates the *Helvetica* fonts.
+The Helvetica fonts are a classical font choice for presentations.
+
+To use the Helvetica fonts:
+
+```latex
+\usetheme[helvetica]{pureminimalistic}
+```
+
+If you prefer the default fonts, disable the Fira Fonts with:
+
+```latex
+\usetheme[nofirafonts]{pureminimalistic}
+```
+
+## Color
+The theme includes two default color options.
+The default color theme is a light color theme.
+The alternative color theme is the dark color theme, enabled with:
+
+```latex
+\usetheme[darkmode]{pureminimalistic}
+```
+
+To customize the colors, the themes color commands can
+be redefined. Please set these *after* loading the theme
+and *before* `\begin{document}` for the changes to take effect.
+
+The following theme color commands exist:
+- `\beamertextcolor`
+- `\beamerbgcolor`
+- `\beamerfootertextcolor`
+- `\beamertitlecolor`
+
+To redefine the background, for example, the following commands
+could be used:
+```latex
+\usetheme{pureminimalistic}
+\definecolor{textcolor}{RGB}{0, 0, 120}
+\definecolor{title}{RGB}{0, 0, 0}
+\definecolor{footercolor}{RGB}{133, 133, 133}
+\definecolor{bg}{RGB}{25, 116, 210}
+
+\renewcommand{\beamertextcolor}{textcolor}
+\renewcommand{\beamerbgcolor}{bg}
+\renewcommand{\beamerfootertextcolor}{footercolor}
+\renewcommand{\beamertitlecolor}{title}
+```
+
+## Footer options
+
+### Show max slide numbers
+To show the maximum number of slides, enable the
+`showmaxslides` option:
+
+```latex
+\usetheme[showmaxslides]{pureminimalistic}
+```
+
+### Disable footer
+To disable the footer altogether, including the institute image,
+set the `nofooter` option:
+
+```latex
+\usetheme[nofooter]{pureminimalistic}
+```
 
 # Release status
 The next steps and thoughts about the next release

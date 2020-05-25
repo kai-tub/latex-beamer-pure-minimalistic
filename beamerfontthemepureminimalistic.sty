@@ -20,13 +20,36 @@
 % me over: https://github.com/kai-tub/latex-beamer-pure-minimalistic
 
 \ProvidesPackage{beamerfontthemepureminimalistic}
+\RequirePackage{ifthen}
+\mode<presentation>
+
+\newboolean{nofirafonts}
+\setboolean{nofirafonts}{false}
+\newboolean{helvetica}
+\setboolean{helvetica}{false}
+
+\DeclareOptionBeamer{nofirafonts}{\setboolean{nofirafonts}{true}}
+\DeclareOptionBeamer{helvetica}{\setboolean{helvetica}{true}}
+\ProcessOptionsBeamer
 
 \RequirePackage{silence}
 % I have no clue how I can fix this warning
 \WarningFilter{latex}{Font shape declaration has incorrect series value}
-\RequirePackage[T1]{fontenc}
-\RequirePackage[scaled]{helvet}
-\mode<presentation>
+
+\ifthenelse{\boolean{helvetica}}{%
+    % If Helvetica overwrites the fira fonts settings
+    \RequirePackage[T1]{fontenc}
+    \RequirePackage[scaled]{helvet}
+}{%
+    \ifthenelse{\boolean{nofirafonts}}{%
+        % Load default fonts
+    }{%
+        % By default load Fira
+        \RequirePackage[T1]{fontenc}
+        \RequirePackage[sfdefault]{FiraSans}
+        \RequirePackage{FiraMono}
+    }
+}
 
 \renewcommand\normalsize{\fontsize{12pt}{14pt}\selectfont}
 \renewcommand\small{\fontsize{10pt}{12pt}\selectfont}
@@ -54,6 +77,8 @@
 \setbeamerfont*{institute}{parent=normal text}
 
 \setbeamerfont{frametitle}{parent=alerted text,size*={16pt}{18pt}}
+\setbeamerfont{caption}{series=\normalfont, size=\small}
+\setbeamerfont{caption name}{series=\normalfont, size=\small}
 
 \setbeamerfont*{itemize/enumerate body}{parent=normal text}
 \setbeamerfont*{itemize/enumerate subbody}{parent=itemize/enumerate body}
