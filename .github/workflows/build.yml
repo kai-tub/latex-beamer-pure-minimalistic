@@ -37,7 +37,7 @@ jobs:
           ln -s ../logos ./
           latexmk -pdf -file-line-error -interaction=nonstopmode *.tex
       - name: Build compare examples
-        working-directory: compare_example/
+        working-directory: compare_examples/
         run: |
           ln -s ../*.sty ./
           ln -s ../logos ./
