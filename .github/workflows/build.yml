@@ -16,8 +16,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build_latex"
-  build_and_run_tests:
+  build:
     name: Build all files
     runs-on: ubuntu-latest
     container:
@@ -40,10 +39,20 @@ jobs:
       - name: Build compare examples
         working-directory: compare_example/
         run: |
+          ln -s ../*.sty ./
+          ln -s ../logos ./
           latexmk -pdf -file-line-error -interaction=nonstopmode *example*.tex
       - name: Build demo document
         run: |
           latexmk -pdf -file-line-error -interaction=nonstopmode demo.tex
+      - name: Convert minimal example PDFs to PNGs
+        working-directory: minimal_examples/
+        uses: docker://frapsoft/fish:latest
+        with:
+          args: fish ./.github/workflow/convert_pdf_to_png.fish
+      - name: Break pipeline
+        run: exit 1
+      # Build script for conersion of all filesz
       # - name: Convert minimal example PDFs to PNGs
       #   run: |
       # - name: Build images for docs
