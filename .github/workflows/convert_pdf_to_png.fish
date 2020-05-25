@@ -1,7 +1,7 @@
 #!/bin/fish
 
 function convert_minimal_examples
-    set files (find ./minimal_examples -type d -path '*/.git' -prune -o -name '*.pdf' -print0 | string split0)
+    set files (find ./minimal_examples -type d -path '*/.git' -prune -o -name '*.pdf' -print)
     for file_ in $files
         echo "$file_"
         set target (string replace '.pdf' '.png' "$file_")
@@ -10,7 +10,7 @@ function convert_minimal_examples
 end
 
 function convert_compare_examples
-    set files (find ./compare_examples -type d -path '*/.git' -prune -o -name '*example*.pdf' -print0 | string split0)
+    set files (find ./compare_examples -type d -path '*/.git' -prune -o -name '*example*.pdf' -print)
     for file_ in $files
         echo "$file_"
         set convert_target (string replace -r '(.*)\.pdf' '$1-%02d.png' "$file_")
