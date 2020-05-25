@@ -54,7 +54,7 @@ jobs:
         with:
           source-directory: "./"
           include-patterns: "demo.pdf *.png"
-          exclude-patterns: "*.tmp.png"
+          exclude-patterns: "*.tmp.png logos"
           commit-message: "Updating LaTeX documentation files"
           dry-run: true
         env:
