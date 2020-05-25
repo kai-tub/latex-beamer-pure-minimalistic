@@ -70,7 +70,7 @@ and on the right is the default beamer theme.
 On the left is the pure minimalistic theme in light mode,
 and on the right is the default beamer theme.
 
-![comparison-light](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png)
+![comparison-light](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_light.png)
 
 # Download
 Download the latest release by going to the [release page](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases).
@@ -87,7 +87,8 @@ LaTeX source file. Then include the theme by writing
  
 # Customize Logos
 Right now the theme expects the logos to be present in a
-folder `logos` with the names: `header_logo`, `header_logo_darkmode`, `institute_logo` and `institute_logo_darkmode`. Currently, the best way to include
+folder `logos` with the names: `header_logo`, `header_logo_darkmode`, `institute_logo` and `institute_logo_darkmode`. 
+Currently, the best way to include
 your logo is to replace these files and, if necessary, modify
 the code where the figures are included in the
 `beamerouterthemepureminimalistic.sty` file.
@@ -102,6 +103,8 @@ The default fonts are the [Fira Fonts](https://bboxtype.com/typefaces/FiraSans/#
 This decision was inspired from another awesome beamer theme,
 the [Focus beamer theme](https://github.com/elauksap/focus-beamertheme).
 
+![fira-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/fira_font.png)
+
 Some dislike the Fira Fonts. As an alternative this
 theme also integrates the *Helvetica* fonts.
 The Helvetica fonts are a classical font choice for presentations.
@@ -112,11 +115,15 @@ To use the Helvetica fonts:
 \usetheme[helvetica]{pureminimalistic}
 ```
 
+![helvetica-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/helvetica_font.png)
+
 If you prefer the default fonts, disable the Fira Fonts with:
 
 ```latex
 \usetheme[nofirafonts]{pureminimalistic}
 ```
+
+![helvetica-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/default_font.png)
 
 ## Color
 The theme includes two default color options.
@@ -152,6 +159,8 @@ could be used:
 \renewcommand{\beamertitlecolor}{title}
 ```
 
+![custom-color](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/custom_color.png)
+
 ## Footer options
 
 **Show max slide numbers**
@@ -163,6 +172,8 @@ To show the maximum number of slides, enable the
 \usetheme[showmaxslides]{pureminimalistic}
 ```
 
+![show-max-slides](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/show_max_slides.png)
+
 **Disable footer**
 
 To disable the footer altogether, including the institute image,
@@ -171,6 +182,8 @@ set the `nofooter` option:
 ```latex
 \usetheme[nofooter]{pureminimalistic}
 ```
+
+![no-footer](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/no_footer.png)
 
 # Release status
 The next steps and thoughts about the next release
