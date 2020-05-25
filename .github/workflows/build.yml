@@ -38,7 +38,7 @@ jobs:
         run: |
           export TEXINPUTS="$GITHUB_WORKSPACE"//:
       - name: Echo TEXINPUTS
-          echo $TEXINPUTS
+        run: echo $TEXINPUTS
       - name: Copy *.sty packages
         run: |
           mkdir -p ~/texmf/tex/latex
