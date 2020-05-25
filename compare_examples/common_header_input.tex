@@ -25,42 +25,21 @@
 % \documentclass{beamer} 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usetheme[]{pureminimalistic}
-% \usepackage[backend=biber, doi=false, maxbibnames=2, maxcitenames=2,%
-%             style=numeric, sorting=none, url=false, eprint=false]{biblatex}
-% \addbibresource{demo_bib.bib}
+
+\usepackage[backend=biber, doi=false, maxbibnames=2, maxcitenames=2,%
+style=numeric, sorting=none, url=false, eprint=false]{biblatex}
+\addbibresource{demo_bib.bib}
 % this makes it possible to add backup slides, without counting them
 \usepackage{appendixnumberbeamer}
 \renewcommand{\appendixname}{\texorpdfstring{\translate{appendix}}{appendix}}
 
+\usepackage{graphicx}
+\usepackage{float}
+
 % if loaded after begin{document} a warning will appear: "pdfauthor already used"
-\title[short title]{Test template}
+\title[Short title]{This is the normal length of a research paper:
+always longer than you would expect}
 \author{Kai Norman Clasen}
-\institute{Testing} 
+\institute{Insitute name} 
 \date{\today}
 
-\begin{document}
-% has to be loaded outside of a frame to work!
-\maketitle
-
-\begin{frame}[fragile]{Testing fragile frame}
-  \begin{verbatim}
-    Use the provided \vfilleditems environment to create 
-    nicely spaced bullet points.
-
-    \begin{vfilleditems}
-      \item In my opinion, I like it to have my bullet points
-      \item evenly spaced from one another
-      \item then few bullet points, are not crammed on 
-      the upper part of the slide
-    \end{vfilleditems}
-    \end{verbatim}
-\end{frame}
-
-\begin{frame}{Normal frame}
-  This will show how a normal frame looks like
-\end{frame}
-
-
-
-\end{document}

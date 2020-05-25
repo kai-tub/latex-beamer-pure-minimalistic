@@ -1,0 +1,63 @@
+name: Build
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    paths:
+      - "**.tex"
+      - "**.yml"
+    branches: [ master ]
+  pull_request:
+    paths:
+      - "**.tex"
+      - "**.yml"
+    branches: [ master ]
+  
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    name: Build all files
+    runs-on: ubuntu-latest
+    container:
+      image: xucheng/texlive-small:latest
+    defaults:
+      run:
+        shell: sh
+    steps:
+      - name: Set up repo
+        uses: actions/checkout@v2
+      - name: Install missing packages
+        run: |
+          tlmgr install silence appendixnumberbeamer fira fontaxes mwe
+      - name: Build minimal examples
+        working-directory: minimal_examples/
+        run: |
+          ln -s ../*.sty ./
+          ln -s ../logos ./
+          latexmk -pdf -file-line-error -interaction=nonstopmode *.tex
+      - name: Build compare examples
+        working-directory: compare_examples/
+        run: |
+          ln -s ../*.sty ./
+          ln -s ../logos ./
+          latexmk -pdf -file-line-error -interaction=nonstopmode *example*.tex
+      - name: Build demo document
+        run: |
+          latexmk -pdf -file-line-error -interaction=nonstopmode demo.tex
+      - name: PDFs to PNGs
+        uses: docker://frapsoft/fish:latest
+        with:
+          args: fish ./.github/workflows/convert_pdf_to_png.fish
+        if: github.event_name == 'push'
+      - name: Sync docs
+        uses: kai-tub/external-repo-sync-action@v1
+        with:
+          source-directory: "./"
+          include-patterns: "demo.pdf *.png"
+          exclude-patterns: "*.tmp.png logos"
+          commit-message: "Updating LaTeX documentation files"
+        env:
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+        if: github.event_name == 'push'

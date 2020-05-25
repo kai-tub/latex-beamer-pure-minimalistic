@@ -26,6 +26,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usetheme[showmaxslides, darkmode]{pureminimalistic}
+
 \usepackage[backend=biber, doi=false, maxbibnames=2, maxcitenames=2,%
             style=numeric, sorting=none, url=false, eprint=false]{biblatex}
 \addbibresource{demo_bib.bib}
@@ -34,10 +35,10 @@
 \renewcommand{\appendixname}{\texorpdfstring{\translate{appendix}}{appendix}}
 
 % if loaded after begin{document} a warning will appear: "pdfauthor already used"
-\title[short title]{this is the normal length of a research paper:
+\title[short title]{This is the normal length of a research paper:
 always longer than you would expect}
 \author{Kai Norman Clasen}
-\institute{insitute name} 
+\institute{Insitute name} 
 \date{\today}
 
 \begin{document}
@@ -55,7 +56,7 @@ always longer than you would expect}
   This pdf uses a 16:9 aspect ratio. To utilize
   this version, simply use:
   \begin{verbatim}
-        \documentclass[aspectratio=169]{beamer}
+    \documentclass[aspectratio=169]{beamer}
     \end{verbatim}
   \vfill
   The default is a 4:3 aspect ratio.
@@ -64,15 +65,14 @@ always longer than you would expect}
   \end{verbatim}
 \end{frame}
 
-
 \section{vfilleditems}
 \begin{frame}[fragile]{Using vfilleditems}
   \begin{verbatim}
-    Use the provided \vfilleditems environment to create 
-    nicely spaced bullet points.
+    Use the provided \vfilleditems environment 
+    to create nicely spaced bullet points.
 
     \begin{vfilleditems}
-      \item In my opinion, I like it to have my bullet points
+      \item I like it to have my bullet points
       \item evenly spaced from one another
       \item then few bullet points, are not crammed on 
       the upper part of the slide
@@ -82,26 +82,10 @@ always longer than you would expect}
 
 \begin{frame}{Using vfilleditems}
   \begin{vfilleditems}
-    \item In my opinion, I like it to have my bullet points
+    \item I like it to have my bullet points
     \item evenly spaced from one another
     \item then few bullet points, are not crammed on
     the upper part of the slide
-  \end{vfilleditems}
-\end{frame}
-
-\begin{frame}{Example of the maximum number of bullet points before getting a warning}
-  \begin{vfilleditems}
-    \item This also
-    \item shows the
-    \item use of a
-    \item too
-    \item long
-    \item title
-    \item in
-    \item the
-    \item header
-    \item The logo stays in the same position
-    \item and the text is moved upwards to fit.
   \end{vfilleditems}
 \end{frame}
 
@@ -115,19 +99,46 @@ always longer than you would expect}
 
     {\large This is large}
   \vfill
-  Per default the \emph{helvet} Font Package is
-  used, as I find it easier to read for presentations.
+  Per default the \emph{Fira Font} Package is
+  used. The \emph{Helvetica Font} is also bundled into this
+  package.
 \end{frame}
 
-\begin{frame}{Text to review the font}
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-  aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-  duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-  sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-  consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-  eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+\begin{frame}[fragile]{Fonts}
+  To use \emph{Helvetica} instead of \emph{Fira Fonts}
+  \begin{verbatim}
+    \usetheme[helvetica]{pureminimalistic}
+  \end{verbatim}
+  \vfill
+  To disable the \emph{Fira Fonts} and use the default font
+  \begin{verbatim}
+    \usetheme[nofirafonts]{pureminimalistic}
+  \end{verbatim}
+\end{frame}
+
+\section{Color}
+\begin{frame}[fragile]{Color}
+  To overwrite the theme color
+  \begin{enumerate}
+    \item Define a new color
+    \item redefine the themes color (before document begins)
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Change color example}
+  \small
+  \begin{verbatim}
+  \usetheme{pureminimalistic}
+  \definecolor{textcolor}{RGB}{0, 0, 120}
+  \definecolor{title}{RGB}{0, 0, 0}
+  \definecolor{footercolor}{RGB}{133, 133, 133}
+  \definecolor{bg}{RGB}{25, 116, 210}
+
+  \renewcommand{\beamertextcolor}{textcolor}
+  \renewcommand{\beamerbgcolor}{bg}
+  \renewcommand{\beamerfootertextcolor}{footercolor}
+  \renewcommand{\beamertitlecolor}{title}
+  \end{verbatim}
 \end{frame}
 
 \begin{frame}[fragile]{Dark mode}
@@ -142,7 +153,7 @@ always longer than you would expect}
   files if \texttt{darkmode} is used.
 \end{frame}
 
-\section{Logos}
+\section{Graphics}
 \begin{frame}[fragile]{Logos}
   I've tried to come up with an easy to use interface on how
   a user could modify the logos parameters
@@ -155,13 +166,38 @@ always longer than you would expect}
   in the \texttt{beamerouterthemepureminimalist}-file.
 \end{frame}
 
+\begin{frame}{Figures}
+    \begin{figure}[H]
+        \centering
+        \begin{columns}[T]
+            \begin{column}{.4\linewidth}
+                \includegraphics[width=\linewidth]{example-image-a}
+                \caption{Example A}
+            \end{column}
+            \begin{column}{.4\linewidth}
+                \includegraphics[width=\linewidth]{example-image-b}
+                \caption{Example B}
+            \end{column}
+        \end{columns}
+    \end{figure}
+\end{frame}
+
+
+\section{Footer options}
+\begin{frame}[fragile]{Disable footer}
+  If you do not want to use a footer, disable it with:
+  \begin{verbatim}
+    \usetheme[nofooter]{pureminimalistic}
+  \end{verbatim}
+\end{frame}
+
 \begin{frame}[fragile]{Show max slide numbers}
-  In this presentation, I used the option to
+  For these slides, I used the option to
   show the maximum number of slides. To activate it
   one has to activate it with:
   \begin{verbatim}
     \usetheme[showmaxslides]{pureminimalistic}
-    \end{verbatim}
+  \end{verbatim}
   Usually, I prefer to not show the maximum number of
   slides, as the people tend to lose focus if they know
   the last few slides are shown.
@@ -172,12 +208,7 @@ always longer than you would expect}
   I've also changed the bibliography options to be minimalistic:
 
   Just showing a simple \texttt{\textbackslash{}cite} \cite{AlexNet}
-\end{frame}
-
-\section*{Sources}
-% Maybe use plain option if the page becomes too messy
-\begin{frame}[allowframebreaks]{Sources}
-  \small
+  \vfill 
   \printbibliography
 \end{frame}
 

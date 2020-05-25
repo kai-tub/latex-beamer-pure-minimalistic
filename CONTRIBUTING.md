@@ -13,13 +13,17 @@ If you find a typo in the documentation, do not hesitate to submit a GitHub pull
    go ahead and implement it.
 
 ## PR guide
-If you implemented a new feature, which uses a new option argument, you are likely required to change the tests.
-Don't worry it is very easy to integrate the test. Simply open the [generate_all_options.py](tests/generate_all_options.py) and
-add the new option with a descriptive name to the `OPTIONS` dictionary. What will happen in your PR now is that the 
-[template document](tests/template.tex) will be compiled once with all options. This ensures that there are no other
+If you implemented a new feature, you should add a new minimal example
+in the [minimal_examples](./minimal_examples/) folder.
+Then the [demo.tex](demo.tex) file should be modified to explain
+how the option should be used and what the effect is.
+
+In the PR all minimal examples will be compiled automatically. 
+This ensures that there are no other
 breaking changes to other options. To speed up the tests, a minimal `texlive` distribution is used. If your changes
-require new packages, they have to be added to the [workflow file](.github/workflows/main.yml).
-(This may change in the future)
+require new packages, they have to be added to the 
+[build file](.github/workflows/build.yml).
+
 If anything is unclear, feel free to start the PR and mention the part that is hard to understand. I am happy to help. :)
 
 If everything is OK, and all the tests are passing for the PR, I will reproduce and inspect the new feature locally,
@@ -31,4 +35,5 @@ If you are not familiar with creating a Pull Requeest, here are some guides:
 
 Afterwards you will be added to the list of contributers.
 
-Thanks for your hard work and for sticking around until the end of the guide! :tada::tada::tada:
+Thanks for your hard work and for sticking around until 
+the end of the guide! :tada::tada::tada:

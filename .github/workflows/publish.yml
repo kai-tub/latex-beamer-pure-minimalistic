@@ -35,14 +35,6 @@ jobs:
           asset_path: ./pureminimalistic.tar.gz
           asset_name: pureminimalistic.tar.gz
           asset_content_type: application/tar.gz
-      # Then this action has to first download the pdf
-      # - name: Upload pdf
-      #   uses: actions/upload-release-asset@v1
-      #   with:
-      #     upload_url: ${{ steps.release.outputs.upload_url }}
-      #     asset_path: ./demo.pdf
-      #     asset_name: demo.pdf
-      #     asset_content_type: application/pdf
       - name: Action tagger
         uses: Actions-R-Us/actions-tagger@latest
         with:

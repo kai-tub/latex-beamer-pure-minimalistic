@@ -32,23 +32,25 @@
 \definecolor{pureminimalistic@text@black}{RGB}{0,0,0}
 \definecolor{pureminimalistic@text@gray}{RGB}{113,113,113}
 \definecolor{pureminimalistic@text@whiter_gray}{RGB}{200,200,200}
-\definecolor{pureminimalistic@text@red}{RGB}{197,14,31}
+\definecolor{pureminimalistic@text@red}{RGB}{190,15,30}
 \definecolor{pureminimalistic@text@white}{RGB}{255, 255, 255}
 
+\newcommand{\beamertitlecolor}{pureminimalistic@text@red}
+
 \ifthenelse{\boolean{darkmode}}{
-  \newcommand{\beamerfgcolor}{pureminimalistic@text@white}%
+  \newcommand{\beamertextcolor}{pureminimalistic@text@white}%
   \newcommand{\beamerbgcolor}{pureminimalistic@text@black}%
-  \newcommand{\footergray}{pureminimalistic@text@whiter_gray}%
+  \newcommand{\beamerfootertextcolor}{pureminimalistic@text@whiter_gray}%
 }{%
-  \newcommand{\beamerfgcolor}{pureminimalistic@text@black}%
+  \newcommand{\beamertextcolor}{pureminimalistic@text@black}%
   \newcommand{\beamerbgcolor}{pureminimalistic@text@white}%
-  \newcommand{\footergray}{pureminimalistic@text@gray}%
+  \newcommand{\beamerfootertextcolor}{pureminimalistic@text@gray}%
 }
 
-\setbeamercolor*{normal text}{fg=\beamerfgcolor, bg=\beamerbgcolor}
-\setbeamercolor*{alerted text}{fg=pureminimalistic@text@red, bg=\beamerbgcolor}
-\setbeamercolor*{footline}{fg=\footergray, bg=\beamerbgcolor}
-\setbeamercolor*{frametitle}{fg=pureminimalistic@text@red, bg=\beamerbgcolor}
+\setbeamercolor*{normal text}{fg=\beamertextcolor, bg=\beamerbgcolor}
+\setbeamercolor*{alerted text}{fg=\beamertitlecolor, bg=\beamerbgcolor}
+\setbeamercolor*{footline}{fg=\beamerfootertextcolor, bg=\beamerbgcolor}
+\setbeamercolor*{frametitle}{fg=\beamertitlecolor, bg=\beamerbgcolor}
 
 \setbeamercolor*{author}{parent=normal text}
 \setbeamercolor*{title}{parent=frametitle}

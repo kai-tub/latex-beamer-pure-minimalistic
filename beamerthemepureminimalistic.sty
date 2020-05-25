@@ -21,11 +21,12 @@
 
 \mode<presentation>
 
-% Requirements
-\RequirePackage{tikz}
-
 \DeclareOptionBeamer{darkmode}{\PassOptionsToPackage{darkmode}{beamercolorthemepureminimalistic}}
 \DeclareOptionBeamer{showmaxslides}{\PassOptionsToPackage{showmaxslides}{beamerouterthemepureminimalistic}}
+\DeclareOptionBeamer{nofooter}{\PassOptionsToPackage{nofooter}{beamerouterthemepureminimalistic}}
+\DeclareOptionBeamer{nofirafonts}{\PassOptionsToPackage{nofirafonts}{beamerfontthemepureminimalistic}}
+\DeclareOptionBeamer{helvetica}{\PassOptionsToPackage{helvetica}{beamerfontthemepureminimalistic}}
+
 \ProcessOptionsBeamer
 
 % Settings
