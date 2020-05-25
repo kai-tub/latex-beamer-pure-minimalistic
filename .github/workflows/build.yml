@@ -46,7 +46,6 @@ jobs:
         run: |
           latexmk -pdf -file-line-error -interaction=nonstopmode demo.tex
       - name: Convert minimal example PDFs to PNGs
-        working-directory: minimal_examples/
         uses: docker://frapsoft/fish:latest
         with:
           args: fish ./.github/workflow/convert_pdf_to_png.fish
