@@ -31,23 +31,12 @@ jobs:
       - name: Install missing packages
         run: |
           tlmgr install silence appendixnumberbeamer fira fontaxes mwe
-      - name: Echo
-        run: |
-          echo $(pwd)
-      - name: Add pureminimalistic to TEXINPUTS
-        run: |
-          export TEXINPUTS="$GITHUB_WORKSPACE"//:
-      - name: Echo TEXINPUTS
-        run: echo $TEXINPUTS
-      - name: Copy *.sty packages
-        run: |
-          mkdir -p /usr/share/texmf/tex/latex/
-          cp *.sty /usr/share/texmf/tex/latex/
-          cp -r logos /usr/share/texmf/tex/latex/
       - name: Build minimal examples
         working-directory: minimal_examples/
         run: |
-         latexmk -pdf -file-line-error -interaction=nonstopmode *.tex
+          ln -s ../*.sty ./
+          ln -s ../logos ./
+          latexmk -pdf -file-line-error -interaction=nonstopmode *.tex
       - name: Build compare examples
         working-directory: compare_example/
         run: |
