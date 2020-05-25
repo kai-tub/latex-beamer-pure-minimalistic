@@ -48,7 +48,7 @@ jobs:
       - name: Convert minimal example PDFs to PNGs
         uses: docker://frapsoft/fish:latest
         with:
-          args: fish ./.github/workflow/convert_pdf_to_png.fish
+          args: fish ./.github/workflows/convert_pdf_to_png.fish
       - name: Break pipeline
         run: exit 1
       # Build script for conersion of all filesz
