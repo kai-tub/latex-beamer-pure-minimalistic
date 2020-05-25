@@ -37,6 +37,13 @@ jobs:
       - name: Add pureminimalistic to TEXINPUTS
         run: |
           export TEXINPUTS="$GITHUB_WORKSPACE"//:
+      - name: Echo TEXINPUTS
+          echo $TEXINPUTS
+      - name: Copy *.sty packages
+        run: |
+          mkdir -p ~/texmf/tex/latex
+          cp *.sty ~/texmf/tex/latex/
+          cp -r logos ~/texmf/tex/latex/
       - name: Build minimal examples
         working-directory: minimal_examples/
         run: |
