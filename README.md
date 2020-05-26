@@ -12,6 +12,16 @@
 A presentation theme for LaTeX-Beamer that is truly
 minimalistic, so that the focus is on the presenter and
 not on the slides.
+
+Requires the packages [fira](https://ctan.org/pkg/fira) and
+[silence](https://ctan.org/pkg/silence)
+to be installed on your system.
+To build the [demo.tex](demo.tex) file, 
+[PGF/TikZ](https://ctan.org/pkg/pgf), 
+[appendixnumberbeamer](https://ctan.org/pkg/appendixnumberbeamer),
+[fontaxes](https://ctan.org/pkg/fontaxes), and
+[mwe](https://ctan.org/pkg/mwe) are also required.
+
 </div>
 
 **Table of contents:**
@@ -53,9 +63,10 @@ Please use [demo.tex](demo.tex)
 as a starting point, as exhaustive comments
 were added for a smooth start.
 
-Here is a short *inline teaser* version of the [demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf).
+[Here](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.png)
+a short *inline teaser* version of the [demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf) can be seen.
 
-![demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.png)
+![demo.png](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.png)
 
 Please look at the [PDF](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf) version for high-resolution images. :)
 
@@ -69,13 +80,14 @@ theme and the pure minimalistic beamer theme
 (inspired by the [auriga beamer theme](https://github.com/anishathalye/auriga)):
 
 ## Dark mode
-On the left is the pure minimalistic theme in dark mode,
-and on the right is the default beamer theme.
+On the [left](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png)
+is the pure minimalistic theme in dark mode,
+and on the [right](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png) is the default beamer theme.
 ![comparison-dark](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png)
 
 ## Light mode
-On the left is the pure minimalistic theme in light mode,
-and on the right is the default beamer theme.
+On the [left](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_light.png) is the pure minimalistic theme in light mode,
+and on the [right](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_light.png) is the default beamer theme.
 
 ![comparison-light](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_light.png)
 
@@ -126,8 +138,6 @@ with:
 \renewcommand{\logofooter}{\includegraphics%
   [width=.15\linewidth]{alternative_logo/console.png}}
 ```
-
-The result will look like this:
 
 ![alternative-title-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/alternative_title_logo.png)
 
