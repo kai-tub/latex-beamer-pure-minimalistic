@@ -1,3 +1,5 @@
+name: Upload Assets
+
 on:
   release:
       types: [ published ]
