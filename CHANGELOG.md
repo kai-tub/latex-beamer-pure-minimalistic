@@ -1,3 +1,15 @@
+# v1.2.2 (Tue May 26 2020)
+
+#### 🐛 Bug Fix
+
+- Fix line endings according to CTAN requirements [#35](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/35) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 1
+
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v1.2.1 (Tue May 26 2020)
 
 #### 🐛 Bug Fix
