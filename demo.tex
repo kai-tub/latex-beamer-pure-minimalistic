@@ -25,6 +25,7 @@
 % \documentclass{beamer} 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{tikz}
 \usetheme[showmaxslides, darkmode]{pureminimalistic}
 
 \usepackage[backend=biber, doi=false, maxbibnames=2, maxcitenames=2,%
@@ -205,6 +206,37 @@ always longer than you would expect}
         \end{columns}
     \end{figure}
 \end{frame}
+
+\begin{frame}[fragile]{Figures -- Set background watermark}
+  There is no extra option to define a background watermark, but here
+  is a command that could be used to create one manually:
+  \vfill
+  \begin{verbatim}
+\setbeamertemplate{background}{%
+  \tikz[overlay,remember picture]%
+  \node[opacity=0.8]at (current page.center)%
+  {\includegraphics[width=.2\linewidth]%
+  {example-image-a}};%
+}
+  \end{verbatim}
+\end{frame}
+
+{
+  \setbeamertemplate{background}{%
+    \tikz[overlay,remember picture]%
+    \node[opacity=0.8]at (current page.center)%
+    {\includegraphics[width=.2\linewidth]%
+    {example-image-a}};%
+  }
+\begin{frame}{Figures -- Set background watermark}
+  Usually you would add this command to specific
+  frames by enclosing this command and all desired frames with
+  curly brackets.
+  \vfill
+  See the source code of this \emph{*.tex} file for an
+  example.
+\end{frame}
+}
 
 
 \section{Footer options}
