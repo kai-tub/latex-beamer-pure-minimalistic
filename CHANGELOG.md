@@ -1,3 +1,15 @@
+# v1.2.1 (Tue May 26 2020)
+
+#### 🐛 Bug Fix
+
+- Fixed asset upload to comply to CTAN specs [#34](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/34) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 1
+
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v1.2.0 (Tue May 26 2020)
 
 #### 🚀 Enhancement
