@@ -5,9 +5,8 @@
 [![GitHub license](https://badgen.net/github/license/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/blob/master/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?color=blue)](CODE_OF_CONDUCT.md)
 
-![Build](https://github.com/kai-tub/latex-beamer-pure-minimalistic/workflows/Build/badge.svg?branch=master)
-![Release](https://github.com/kai-tub/latex-beamer-pure-minimalistic/workflows/Release/badge.svg?branch=master)
-
+![Build and Release](https://github.com/kai-tub/latex-beamer-pure-minimalistic/workflows/Build%20and%20Release/badge.svg)
+![Upload Assets](https://github.com/kai-tub/latex-beamer-pure-minimalistic/workflows/Upload%20Assets/badge.svg)
 
 A presentation theme for LaTeX-Beamer that is truly
 minimalistic, so that the focus is on the presenter and
