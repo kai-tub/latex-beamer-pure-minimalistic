@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "git-tag",
+    "first-time-contributor",
+  ],
+  "owner": "kai-tub",
+  "repo": "latex-beamer-pure-minimalistic",
+  "name": "Kai Norman Clasen",
+  "email": "thekaiclasen@web.de"
+}
