@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  release:
+    name: Release new version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git
+        uses: actions/checkout@v2
+      - name: Prepare repository
+        run: git fetch --unshallow --tags
+      - name: get shipit
+        run: |
+          curl -vkL -o - https://github.com/intuit/auto/releases/download/v9.35.1/auto-linux.gz | gunzip > ~/auto 
+          chmod a+x ~/auto
+      - name: Create Release
+        run: |
+          ~/auto shipit
+        env:
+          # To be able to trigger next event
+          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
