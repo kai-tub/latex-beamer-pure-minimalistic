@@ -22,8 +22,8 @@ not on the slides.
   - [Light mode](#light-mode)
 - [Download](#download)
 - [Instructions](#instructions)
-- [Customize Logos](#customize-logos)
-- [Options](#options)
+- [Customize](#customize)
+  - [Customize Logos](#customize-logos)
   - [Color](#color)
   - [Fonts](#fonts)
   - [Footer options](#footer-options)
@@ -38,8 +38,7 @@ not on the slides.
 - Provides an environment for vertical-spaced items
 - Easy option to either use light- or dark-mode
 - Is designed to be purely minimalistic without any distractions 
-- Easily use own logos (partly functional)
-  
+- Easily use own logos
 
 # Demo
 A sample document can be seen in the
@@ -93,18 +92,46 @@ LaTeX source file. Then include the theme by writing:
 \usetheme[]{pureminimalistic}
 ```
  
-# Customize Logos
-Right now, the theme expects the logos to be present in a
-folder `logos` with the names: `header_logo`, `header_logo_darkmode`, `institute_logo`, and `institute_logo_darkmode`. 
-Currently, the best way to include
-your logo is to replace these files and, if necessary, modify
-the code where the figures are included in the
-`beamerouterthemepureminimalistic.sty` file.
+# Customize
 
-# Options
-
-All options are also described in detail in the
+All options and commands are also described in detail in the
 [demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf).
+
+## Customize Logos
+By default, the theme expects the logos to be present in a
+folder `logos` relative to the `.sty` file with the names: 
+`header_logo`, `header_logo_darkmode`, 
+`institute_logo`, and `institute_logo_darkmode`. 
+
+But you can easily change the logos used.
+There are 3 commands used to define which logos
+are used and how they are formatted:
+- `\logotitle` – Command used for title page. Here `\linewidth`
+  corresponds to the entire paper width.
+- `\logoheader` – Command used for the header. Here `\linewidth`
+  corresponds to a smaller box, as the horizontal space is
+  shared with the title.
+- `\logofooter` – Command used for the footer. Here `\linewidth`
+  corresponds to a smaller box, as the horizontal space is
+  shared with the footer text.
+
+To load your own logos for the title, header, and footer set them
+with:
+
+```latex
+\renewcommand{\logotitle}{\includegraphics%
+  [width=.2\linewidth]{alternative_logo/gameboy.png}}
+\renewcommand{\logoheader}{\includegraphics%
+  [width=.5\linewidth]{alternative_logo/gameboy.png}}
+\renewcommand{\logofooter}{\includegraphics%
+  [width=.15\linewidth]{alternative_logo/console.png}}
+```
+
+The result will look like this:
+
+![alternative-title-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/alternative_title_logo.png)
+
+![alternative-header-footer-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/alternative_header_footer_logo.png)
 
 ## Color
 The theme includes two default color options.
@@ -115,8 +142,6 @@ The alternative color theme is the dark color theme, enabled with:
 \usetheme[darkmode]{pureminimalistic}
 ```
 
-<!-- To customize the colors, the themes color commands can
-be redefined.  -->
 The themes color commands can be redefined to
 customize the appearance.
 

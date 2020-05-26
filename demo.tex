@@ -154,27 +154,51 @@ always longer than you would expect}
 \end{frame}
 
 \section{Graphics}
-\begin{frame}[fragile]{Logos}
-  I've tried to come up with an easy to use interface on how
-  a user could modify the logos parameters
-  from the main document directly
-  but I couldn't come up with a robust solution (if you know
-  how, please open an issue)
+\begin{frame}{Logos}
+  Commands setting the logos:
+  \begin{vfilleditems}
+    \item \texttt{\textbackslash{}logotitle} -- Command used for the title page.
+    Here \texttt{\textbackslash{}linewidth} corresponds to the entire paper width.
+    \item \texttt{\textbackslash{}logoheader} -- Command used for the header.
+    Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
+    as the horizontal space is shared with the title.
+    \item \texttt{\textbackslash{}logofooter} -- Command used for the footer.
+    Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
+    as the horizontal space is shared with the footer text.
+  \end{vfilleditems}
+\end{frame}
 
-  So for now, the way to change the parameters passed
-  to \texttt{includegraphics} is to directly change them
-  in the \texttt{beamerouterthemepureminimalist}-file.
+\begin{frame}[fragile]{Logos -- Load own logo}
+  To use your own logos, simply redefine the commands and adjust the sizes.
+  \begin{verbatim}
+ \renewcommand{\logotitle}{\includegraphics%
+   [width=.2\linewidth]{alternative_logo/gameboy.png}}
+ \renewcommand{\logoheader}{\includegraphics%
+   [width=.5\linewidth]{alternative_logo/gameboy.png}}
+ \renewcommand{\logofooter}{\includegraphics%
+   [width=.15\linewidth]{alternative_logo/console.png}}
+  \end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Logos -- Disable logo}
+  To disable the logo, overwrite the default logo command with an empty
+  command.
+  \begin{verbatim}
+ \renewcommand{\logofooter}{}
+  \end{verbatim}
 \end{frame}
 
 \begin{frame}{Figures}
+  I also changed the default caption settings to not 
+  include \texttt{Figure:} and reduced the font size.
     \begin{figure}[H]
         \centering
         \begin{columns}[T]
-            \begin{column}{.4\linewidth}
+            \begin{column}{.3\linewidth}
                 \includegraphics[width=\linewidth]{example-image-a}
                 \caption{Example A}
             \end{column}
-            \begin{column}{.4\linewidth}
+            \begin{column}{.3\linewidth}
                 \includegraphics[width=\linewidth]{example-image-b}
                 \caption{Example B}
             \end{column}

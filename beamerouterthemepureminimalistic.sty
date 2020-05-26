@@ -45,24 +45,18 @@
   \newcommand{\headerpath}{logos/header_logo}
   \newcommand{\institutepath}{logos/institute_logo}
 }
-%%%%%%%%%%%%%%%%%%%%%% CHANGE HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Change these commands if your logos are not displaying nicely
-%%%%% I am still trying to figure out how these options could be easily accessed
-%%%%% by a user
-%%%%% Note, that all logos are embedded in boxes.
 % The header shares the horizontal space with the frame title in normal mode
-% a value between .5 and .8 should be usually required
-\newcommand{\logoheadercommand}{\includegraphics[width=.5\linewidth]{\headerpath}}
+% a relative width value between .5 and .8 should usually be the best
+\newcommand{\logoheader}{\includegraphics[width=.5\linewidth]{\headerpath}}
 % For the title page, the logo is embedded in the total frame, meaning that \linewidth
-% here refers to the complete \paperwidth, small value < .4 are usually required.
-\newcommand{\logoheaderlargecommand}{\includegraphics[width=.2\paperwidth]{\headerpath}}
+% here refers to the complete \paperwidth, small width values of < .4 are usually best.
+\newcommand{\logotitle}{\includegraphics[width=.2\linewidth]{\headerpath}}
 % The footer will only use part of the space under the line. Usually almost the
 % full linewidth should be used
-\newcommand{\logofootercommand}{\includegraphics[width=.8\linewidth]{\institutepath}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\logofooter}{\includegraphics[width=.8\linewidth]{\institutepath}}
 
 \defbeamertemplate*{frametitle}{largetitle}{
-    \logoheaderlargecommand
+    \logotitle
 }
 
 \newlength{\myleftmargin}
@@ -84,7 +78,7 @@
     \insertframetitle%
   \end{beamercolorbox}%
   \begin{beamercolorbox}[sep=0pt, wd=.2\paperwidth, right]{headline}
-    \logoheadercommand
+    \logoheader
   \end{beamercolorbox}
 }%
 
@@ -117,7 +111,7 @@
       \begin{beamercolorbox}[sep=0mm, wd=.275\paperwidth,right, ht=\myfooterheight]{footline}
         \vbox to\myfooterheight{%
         \vfil%
-        \logofootercommand
+        \logofooter
         \vfil%
         \vfil%
         }%
