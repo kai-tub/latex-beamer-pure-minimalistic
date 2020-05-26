@@ -292,3 +292,4 @@ tmp/
 latex-beamer-pure-minimalistic.wiki/
 __latexindent_temp.tex
 .env
+.devcontainer
