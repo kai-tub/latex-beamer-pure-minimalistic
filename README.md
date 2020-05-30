@@ -52,8 +52,8 @@ To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalis
 
 # Demo
 A sample document can be seen in the
-[beamertheme-pure-minimalistic-demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf),
-produced from [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-beamertheme-pure-minimalistic-demo.tex).
+[beamertheme-pure-minimalistic-demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/beamertheme-pure-minimalistic-demo.pdf),
+produced from [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex).
 The document shows all of the
 design decisions, as well as some packages and commands that
 work well for presentations. For example, starting the
@@ -235,7 +235,7 @@ set the `nofooter` option:
 # Release status
 The next steps and thoughts about the upcoming release
 with possible features can be seen on the [project
-page](https://github.com/kai-tub/latex_beamer_pure_minimalistic/projects/1). 
+page](https://github.com/kai-tub/latex-beamer-pure-minimalistic/projects/1). 
 
 # License
 This software is released under the GNU GPL v3.0 
