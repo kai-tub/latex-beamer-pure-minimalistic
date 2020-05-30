@@ -72,13 +72,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Prepare repository
         run: git fetch --unshallow --tags
-      - name: get shipit
-        run: |
-          curl -vkL -o - https://github.com/intuit/auto/releases/download/v9.35.1/auto-linux.gz | gunzip > ~/auto 
-          chmod a+x ~/auto
-      - name: Create Release
-        run: |
-          ~/auto shipit
+      - name: Run release script
+        run: bash auto_scripts/run_auto.sh
         env:
           # To be able to trigger next event
           GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}

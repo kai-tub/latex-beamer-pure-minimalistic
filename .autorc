@@ -2,6 +2,12 @@
   "plugins": [
     "git-tag",
     "first-time-contributor",
+    [
+      "exec",
+      {
+        "beforeCommitChangelog": "bash auto_scripts/update_package_versioning.sh",
+      }
+    ]
   ],
   "owner": "kai-tub",
   "repo": "latex-beamer-pure-minimalistic",
