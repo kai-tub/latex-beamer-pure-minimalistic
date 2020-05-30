@@ -1,3 +1,15 @@
+# v1.2.3 (Sat May 30 2020)
+
+#### 🐛 Bug Fix
+
+- Package version is automatically updated in LaTeX files [#37](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/37) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 1
+
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v1.2.2 (Tue May 26 2020)
 
 #### 🐛 Bug Fix
