@@ -16,7 +16,7 @@ not on the slides.
 Requires the packages [fira](https://ctan.org/pkg/fira) and
 [silence](https://ctan.org/pkg/silence)
 to be installed on your system.
-To build the [demo.tex](demo.tex) file, 
+To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex) file, 
 [PGF/TikZ](https://ctan.org/pkg/pgf), 
 [appendixnumberbeamer](https://ctan.org/pkg/appendixnumberbeamer),
 [fontaxes](https://ctan.org/pkg/fontaxes), and
@@ -53,13 +53,13 @@ To build the [demo.tex](demo.tex) file,
 # Demo
 A sample document can be seen in the
 [demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf),
-produced from [demo.tex](demo.tex).
+produced from [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-beamertheme-pure-minimalistic-demo.tex).
 The document shows all of the
 design decisions, as well as some packages and commands that
 work well for presentations. For example, starting the
 frame counter after the *Table of Contents* section does not
 include backup slides to the total frame counter.
-Please use [demo.tex](demo.tex)
+Please use [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex)
 as a starting point, as exhaustive comments
 were added for a smooth start.
 

@@ -15,7 +15,7 @@ If you find a typo in the documentation, do not hesitate to submit a GitHub pull
 ## PR guide
 If you implemented a new feature, you should add a new minimal example
 in the [minimal_examples](./minimal_examples/) folder.
-Then the [demo.tex](demo.tex) file should be modified to explain
+Then the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex) file should be modified to explain
 how the option should be used and what the effect is.
 
 In every PR, all minimal examples will be compiled automatically. 

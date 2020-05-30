@@ -46,7 +46,7 @@ jobs:
           latexmk -pdf -file-line-error -interaction=nonstopmode *example*.tex
       - name: Build demo document
         run: |
-          latexmk -pdf -file-line-error -interaction=nonstopmode demo.tex
+          latexmk -pdf -file-line-error -interaction=nonstopmode beamertheme-pure-minimalistic-demo.tex
       - name: PDFs to PNGs
         uses: docker://frapsoft/fish:latest
         with:

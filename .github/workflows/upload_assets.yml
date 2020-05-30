@@ -22,7 +22,7 @@ jobs:
       - name: Create archives
         run: |
           mkdir -p pure-minimalistic-beamertheme
-          cp -r {*.sty,demo.tex,demo.pdf,README.md,LICENSE,demo_bib.bib,logos} pure-minimalistic-beamertheme  
+          cp -r {*.sty,beamertheme-pure-minimalistic-demo.tex,demo.pdf,README.md,LICENSE,demo_bib.bib,logos} pure-minimalistic-beamertheme  
           zip -r pure-minimalistic-beamertheme.zip pure-minimalistic-beamertheme
           tar cfvz pure-minimalistic-beamertheme.tar.gz pure-minimalistic-beamertheme
       - name: Upload zip asset
