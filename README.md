@@ -16,7 +16,7 @@ not on the slides.
 Requires the packages [fira](https://ctan.org/pkg/fira) and
 [silence](https://ctan.org/pkg/silence)
 to be installed on your system.
-To build the [demo.tex](demo.tex) file, 
+To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex) file, 
 [PGF/TikZ](https://ctan.org/pkg/pgf), 
 [appendixnumberbeamer](https://ctan.org/pkg/appendixnumberbeamer),
 [fontaxes](https://ctan.org/pkg/fontaxes), and
@@ -52,23 +52,23 @@ To build the [demo.tex](demo.tex) file,
 
 # Demo
 A sample document can be seen in the
-[demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf),
-produced from [demo.tex](demo.tex).
+[beamertheme-pure-minimalistic-demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf),
+produced from [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-beamertheme-pure-minimalistic-demo.tex).
 The document shows all of the
 design decisions, as well as some packages and commands that
 work well for presentations. For example, starting the
 frame counter after the *Table of Contents* section does not
 include backup slides to the total frame counter.
-Please use [demo.tex](demo.tex)
+Please use [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex)
 as a starting point, as exhaustive comments
 were added for a smooth start.
 
-[Here](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.png)
-a short *inline teaser* version of the [demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf) can be seen.
+[Here](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/beamertheme-pure-minimalistic-demo.png)
+a short *inline teaser* version of the [beamertheme-pure-minimalistic-demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/beamertheme-pure-minimalistic-demo.pdf) can be seen.
 
-![demo.png](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.png)
+![beamertheme-pure-minimalistic-demo.png](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/beamertheme-pure-minimalistic-demo.png)
 
-Please look at the [PDF](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf) version for high-resolution images. :)
+Please look at the [PDF](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/beamertheme-pure-minimalistic-demo.pdf) version for high-resolution images. :)
 
 I highly recommend [pympress](https://github.com/Cimbali/pympress) to add videos to the presentation.
 This presentation tool works perfectly with
@@ -107,7 +107,7 @@ LaTeX source file. Then include the theme by writing:
 # Customize
 
 All options and commands are also described in detail in the
-[demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf).
+[beamertheme-pure-minimalistic-demo.pdf](https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/beamertheme-pure-minimalistic-demo.pdf).
 
 ## Customize Logos
 By default, the theme expects the logos to be present in a

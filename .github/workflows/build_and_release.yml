@@ -46,7 +46,7 @@ jobs:
           latexmk -pdf -file-line-error -interaction=nonstopmode *example*.tex
       - name: Build demo document
         run: |
-          latexmk -pdf -file-line-error -interaction=nonstopmode demo.tex
+          latexmk -pdf -file-line-error -interaction=nonstopmode beamertheme-pure-minimalistic-demo.tex
       - name: PDFs to PNGs
         uses: docker://frapsoft/fish:latest
         with:
@@ -56,7 +56,7 @@ jobs:
         uses: kai-tub/external-repo-sync-action@v1
         with:
           source-directory: "./"
-          include-patterns: "demo.pdf *.png"
+          include-patterns: "beamertheme-pure-minimalistic-demo.pdf *.png"
           exclude-patterns: "*.tmp.png logos"
           commit-message: "Updating LaTeX documentation files"
         env:

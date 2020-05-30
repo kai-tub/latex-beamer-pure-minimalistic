@@ -26,7 +26,8 @@ fi
 
 # bump version
 newVersion=$( bash "${scriptFolder}/semvertool.sh" bump "$bumpType" "$currentVersion" )
+newVersionWithV="v$newVersion"
 
-sed -r -i "s/(\\ProvidesPackage\{\w+\})\[.*\]/\1\[${newVersion}\]/g" -- *.sty
+sed -r -i "s/(\\ProvidesPackage\{\w+\})\[.*\]/\1\[${newVersionWithV}\]/g" -- *.sty
 # Files will be commited via `auto` tool
 git add .
