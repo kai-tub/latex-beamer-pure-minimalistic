@@ -14,36 +14,36 @@ jobs:
     steps:
       - name: Set up Git
         uses: actions/checkout@v2
-      - name: Get demo.pdf
-        run: wget https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/demo.pdf -O demo.pdf
+      - name: Get beamertheme-pure-minimalistic-demo.pdf
+        run: wget https://github.com/kai-tub/latex-beamer-pure-minimalistic/wiki/beamertheme-pure-minimalistic-demo.pdf -O beamertheme-pure-minimalistic-demo.pdf
       - name: Get release
         id: release
         uses: bruceadams/get-release@v1.2.0
       - name: Create archives
         run: |
-          mkdir -p pure-minimalistic-beamertheme
-          cp -r {*.sty,beamertheme-pure-minimalistic-demo.tex,demo.pdf,README.md,LICENSE,demo_bib.bib,logos} pure-minimalistic-beamertheme  
-          zip -r pure-minimalistic-beamertheme.zip pure-minimalistic-beamertheme
-          tar cfvz pure-minimalistic-beamertheme.tar.gz pure-minimalistic-beamertheme
+          mkdir -p beamertheme-pure-minimalistic
+          cp -r {*.sty,beamertheme-pure-minimalistic-demo.tex,beamertheme-pure-minimalistic-demo.pdf,README.md,LICENSE,demo_bib.bib,logos} beamertheme-pure-minimalistic  
+          zip -r beamertheme-pure-minimalistic.zip beamertheme-pure-minimalistic
+          tar cfvz beamertheme-pure-minimalistic.tar.gz beamertheme-pure-minimalistic
       - name: Upload zip asset
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.release.outputs.upload_url }}
-          asset_path: ./pure-minimalistic-beamertheme.zip
-          asset_name: pure-minimalistic-beamertheme.zip
+          asset_path: ./beamertheme-pure-minimalistic.zip
+          asset_name: beamertheme-pure-minimalistic.zip
           asset_content_type: application/zip
       - name: Upload tar.gz asset
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.release.outputs.upload_url }}
-          asset_path: ./pure-minimalistic-beamertheme.tar.gz
-          asset_name: pure-minimalistic-beamertheme.tar.gz
+          asset_path: ./beamertheme-pure-minimalistic.tar.gz
+          asset_name: beamertheme-pure-minimalistic.tar.gz
           asset_content_type: application/tar.gz
-      - name: Upload demo.pdf
+      - name: Upload beamertheme-pure-minimalistic-demo.pdf
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.release.outputs.upload_url }}
-          asset_path: ./demo.pdf
+          asset_path: ./beamertheme-pure-minimalistic-demo.pdf
           asset_name: demo.pdf
           asset_content_type: application/pdf
       

@@ -26,8 +26,8 @@ function convert_compare_examples
 end
 
 function convert_demo
-    convert -density 300 demo.pdf demo-%02d.tmp.png
-    montage demo-*.png -geometry +10+10 -tile 4x -background gray demo.png
+    convert -density 300 beamertheme-pure-minimalistic-demo.pdf beamertheme-pure-minimalistic-demo-%02d.tmp.png
+    montage beamertheme-pure-minimalistic-demo-*.png -geometry +10+10 -tile 4x -background gray beamertheme-pure-minimalistic-demo.png
 end
 
 apk add --no-cache imagemagick

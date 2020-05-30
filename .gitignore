@@ -282,7 +282,7 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 .vscode/
-/demo.pdf
+/beamertheme-pure-minimalistic-demo.pdf
 /demo-screenshots/*
 /deploy.sh
 /dev
