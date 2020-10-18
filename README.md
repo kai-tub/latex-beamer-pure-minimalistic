@@ -24,7 +24,7 @@ To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalis
 [mwe](https://ctan.org/pkg/mwe) are also required.
 
 <!-- <a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee" style="height: 20px !important;width: 81px !important;" ></a> -->
-<a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee" width="81px" height="20px"/></a>
+<a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee" width="162px" height="40px"/></a>
 
 </div>
 
