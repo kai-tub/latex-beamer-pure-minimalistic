@@ -12,6 +12,12 @@ If you find a typo in the documentation, do not hesitate to submit a GitHub pull
    - Choose the corresponding issue template and fill out the required information. Once we agree that the plan looks good,
    go ahead, and implement it.
 
+If you want to, you can also buy us a coffee if you like: 
+
+<center><a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img
+         src="https://cdn.buymeacoffee.com/buttons/v2/arial-orange.png" alt="Buy Me A Coffee"
+         style="height: 40px !important;width: 162px !important;"></a></center>
+
 ## PR guide
 If you implemented a new feature, you should add a new minimal example
 in the [minimal_examples](./minimal_examples/) folder.

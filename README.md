@@ -9,6 +9,7 @@
 ![Build and Release](https://github.com/kai-tub/latex-beamer-pure-minimalistic/workflows/Build%20and%20Release/badge.svg)
 ![Upload Assets](https://github.com/kai-tub/latex-beamer-pure-minimalistic/workflows/Upload%20Assets/badge.svg)
 
+
 A presentation theme for LaTeX-Beamer that is truly
 minimalistic, so that the focus is on the presenter and
 not on the slides.
@@ -21,6 +22,8 @@ To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalis
 [appendixnumberbeamer](https://ctan.org/pkg/appendixnumberbeamer),
 [fontaxes](https://ctan.org/pkg/fontaxes), and
 [mwe](https://ctan.org/pkg/mwe) are also required.
+
+<a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee" style="height: 20px !important;width: 81px !important;" ></a>
 
 </div>
 
