@@ -77,3 +77,4 @@ jobs:
         env:
           # To be able to trigger next event
           GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+
