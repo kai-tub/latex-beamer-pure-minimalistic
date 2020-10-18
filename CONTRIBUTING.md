@@ -14,9 +14,7 @@ If you find a typo in the documentation, do not hesitate to submit a GitHub pull
 
 If you want to, you can also buy us a coffee if you like: 
 
-<center><a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img
-         src="https://cdn.buymeacoffee.com/buttons/v2/arial-orange.png" alt="Buy Me A Coffee"
-         style="height: 40px !important;width: 162px !important;"></a></center>
+<a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee" width="162px" height="40px"/></a>
 
 ## PR guide
 If you implemented a new feature, you should add a new minimal example
