@@ -1,3 +1,15 @@
+# v1.2.6 (Fri Oct 23 2020)
+
+#### 🐛 Bug Fix
+
+- Fixes #46 -- vfilleditems respects grouped overlay settings :tada: [#53](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/53) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 1
+
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v1.2.5 (Fri Oct 23 2020)
 
 #### 🐛 Bug Fix
