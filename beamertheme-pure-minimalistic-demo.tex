@@ -190,21 +190,21 @@ always longer than you would expect}
 \end{frame}
 
 \begin{frame}{Figures}
-  I also changed the default caption settings to not 
+  I also changed the default caption settings to not
   include \texttt{Figure:} and reduced the font size.
-    \begin{figure}[H]
-        \centering
-        \begin{columns}[T]
-            \begin{column}{.3\linewidth}
-                \includegraphics[width=\linewidth]{example-image-a}
-                \caption{Example A}
-            \end{column}
-            \begin{column}{.3\linewidth}
-                \includegraphics[width=\linewidth]{example-image-b}
-                \caption{Example B}
-            \end{column}
-        \end{columns}
-    \end{figure}
+  \begin{figure}[H]
+    \centering
+    \begin{columns}[T]
+      \begin{column}{.3\linewidth}
+        \includegraphics[width=\linewidth]{example-image-a}
+        \caption{Example A}
+      \end{column}
+      \begin{column}{.3\linewidth}
+        \includegraphics[width=\linewidth]{example-image-b}
+        \caption{Example B}
+      \end{column}
+    \end{columns}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]{Figures -- Set background watermark}
@@ -222,12 +222,12 @@ always longer than you would expect}
 \end{frame}
 
 {
-  \setbeamertemplate{background}{%
-    \tikz[overlay,remember picture]%
-    \node[opacity=0.8]at (current page.center)%
-    {\includegraphics[width=.2\linewidth]%
+\setbeamertemplate{background}{%
+  \tikz[overlay,remember picture]%
+  \node[opacity=0.8]at (current page.center)%
+  {\includegraphics[width=.2\linewidth]%
     {example-image-a}};%
-  }
+}
 \begin{frame}{Figures -- Set background watermark}
   Usually you would add this command to specific
   frames by enclosing this command and all desired frames with
@@ -264,7 +264,7 @@ always longer than you would expect}
   I've also changed the bibliography options to be minimalistic:
 
   Just showing a simple \texttt{\textbackslash{}cite} \cite{AlexNet}
-  \vfill 
+  \vfill
   \printbibliography
 \end{frame}
 
