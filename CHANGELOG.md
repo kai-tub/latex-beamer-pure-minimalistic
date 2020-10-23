@@ -1,3 +1,27 @@
+# v1.2.5 (Fri Oct 23 2020)
+
+#### 🐛 Bug Fix
+
+- Fixes #43 [#51](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/51) ([@kai-tub](https://github.com/kai-tub))
+
+#### ⚠️ Pushed to `master`
+
+- Fixing CI pipline ([@kai-tub](https://github.com/kai-tub))
+- Added FUNDING.yml ([@kai-tub](https://github.com/kai-tub))
+
+#### 📝 Documentation
+
+- Testing CI [#50](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/50) ([@kai-tub](https://github.com/kai-tub))
+- Bmc size fix [#49](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/49) ([@kai-tub](https://github.com/kai-tub))
+- Add Buy me a coffee [#48](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/48) ([@kai-tub](https://github.com/kai-tub))
+- Fixed typos [#40](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/40) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 1
+
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v1.2.4 (Sat May 30 2020)
 
 #### 🐛 Bug Fix
