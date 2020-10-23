@@ -67,6 +67,16 @@ always longer than you would expect}
 \end{frame}
 
 \section{vfilleditems}
+\begin{frame}{Using itemize}
+  \begin{itemize}
+    \item I like it to have my bullet points
+    \item evenly spaced from one another
+    \item then few bullet points, are not crammed on
+          the upper part of the slide
+          like it is right now with itemize
+  \end{itemize}
+\end{frame}
+
 \begin{frame}[fragile]{Using vfilleditems}
   \begin{verbatim}
     Use the provided \vfilleditems environment 
@@ -89,6 +99,19 @@ always longer than you would expect}
     the upper part of the slide
   \end{vfilleditems}
 \end{frame}
+
+\begin{frame}{Using vfilleditems}
+  \begin{vfilleditems}
+    \item Note that the overlay specification
+    is a bit different to \emph{itemize}
+    \item For grouped overlay specifications, simply add it
+    directly after the environment:
+    \begin{vfilleditems}
+      \item \texttt{\textbackslash{}begin\{vfilleditems\}<+->}
+    \end{vfilleditems}
+  \end{vfilleditems}
+\end{frame}
+
 
 \section{Fonts}
 \begin{frame}[fragile]{Fonts}
@@ -157,16 +180,16 @@ always longer than you would expect}
 \section{Graphics}
 \begin{frame}{Logos}
   Commands setting the logos:
-  \begin{vfilleditems}
+  \begin{itemize}
     \item \texttt{\textbackslash{}logotitle} -- Command used for the title page.
-    Here \texttt{\textbackslash{}linewidth} corresponds to the entire paper width.
+          Here \texttt{\textbackslash{}linewidth} corresponds to the entire paper width.
     \item \texttt{\textbackslash{}logoheader} -- Command used for the header.
-    Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
-    as the horizontal space is shared with the title.
+          Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
+          as the horizontal space is shared with the title.
     \item \texttt{\textbackslash{}logofooter} -- Command used for the footer.
-    Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
-    as the horizontal space is shared with the footer text.
-  \end{vfilleditems}
+          Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
+          as the horizontal space is shared with the footer text.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Logos -- Load own logo}
@@ -278,16 +301,16 @@ always longer than you would expect}
 \end{frame}
 
 \begin{frame}{What happened to the page numbering?}
-  \begin{vfilleditems}
+  \begin{itemize}
     \item I've used the \texttt{appendixnumberbeamer}
-    package, which resets the frame counting after calling
-    \texttt{\textbackslash{}appendix}
+          package, which resets the frame counting after calling
+          \texttt{\textbackslash{}appendix}
     \item Depending on the used pdf viewer, the total
-    count of frames shouldn't include the backup slides and
-    won't demotivate the audience.
+          count of frames shouldn't include the backup slides and
+          won't demotivate the audience.
     \item Usually, I would use a \texttt{plain} frame
-    for the backup slides.
-  \end{vfilleditems}
+          for the backup slides.
+  \end{itemize}
 \end{frame}
 
 \end{document}

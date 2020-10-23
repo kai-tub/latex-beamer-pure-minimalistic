@@ -24,12 +24,29 @@
 \mode<presentation>
 
 \def\itemsymbol{\raisebox{0.3ex}{\small$\bullet$}}
+% Save the \item makro to \svitem
 \let\svitem\item
-\newenvironment{vfilleditems}{%
-  \begin{itemize} %
-    \let\olditem\item
-          \renewcommand\item[1][\itemsymbol]{\vfill\svitem[##1]}}%
-          {\end{itemize}\vfill}
+\makeatletter
+\newenvironment<>{vfilleditems}{%
+  \begin{itemize}[#1]%
+  \let\olditem\item
+  \renewcommand\item[1][\itemsymbol]{
+    \ifnum\@itemdepth=1\relax
+      \vfill
+    \else
+      \ifnum\@itemdepth=2\relax
+        \setlength\itemsep{0.5ex}
+      \else
+        \ifnum\@itemdepth=3\relax
+          \setlength\itemsep{0.25ex}
+    \fi\fi\fi
+    \svitem[##1]
+  }
+}{
+  \end{itemize}\vfill
+}
+\makeatother
+
 
 \defbeamertemplate*{section in toc}{pureminimalistic}{%
   \hspace{0.5em} \inserttocsectionnumber.~\inserttocsection
