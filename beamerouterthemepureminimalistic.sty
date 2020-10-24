@@ -28,11 +28,14 @@
 
 \newboolean{showmaxslides}
 \setboolean{showmaxslides}{false}
+\newboolean{nofooterlogo}
+\setboolean{nofooterlogo}{false}
 
 \newboolean{nofooter}
 \setboolean{nofooter}{false}
 
 \DeclareOptionBeamer{showmaxslides}{\setboolean{showmaxslides}{true}}
+\DeclareOptionBeamer{nofooterlogo}{\setboolean{nofooterlogo}{true}}
 \DeclareOptionBeamer{nofooter}{\setboolean{nofooter}{true}}
 
 \ProcessOptionsBeamer
@@ -55,6 +58,16 @@
 % full linewidth should be used
 \newcommand{\logofooter}{\includegraphics[width=.8\linewidth]{\institutepath}}
 
+\newcommand{\pageword}{Page}
+\newcommand{\showpagenum}{%
+  \pageword{} \insertframenumber\ifthenelse{%
+    \boolean{showmaxslides}%
+  }{%
+    /\inserttotalframenumber%
+  }{}%
+}
+
+
 \defbeamertemplate*{frametitle}{largetitle}{
     \logotitle
 }
@@ -69,6 +82,23 @@
 \setlength{\myfooterheight}{.08\paperheight}
 
 \setbeamersize{text margin left=\myleftmargin, text margin right=\myrightmargin}
+% This cannot be an environment because I need to access the height parameter
+% after closing the relevant beamercolorbox
+\newcommand{\basicfooter}[2]{%
+  \leavevmode
+  \begin{beamercolorbox}[sep=0pt, wd=\myleftmargin, ht=#1, dp=1ex]{footline}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[sep=0pt, wd=\mytextlength, ht=#1, dp=1ex]{footline}
+    \parbox{\linewidth}%
+    % Don't ask me why I had to insert a space/character after \usebeamercolor
+    % for it to have an effect on \hrule. Same goes for \color{white} \hrule
+    { \usebeamercolor[fg]{normal text}\ \hrule }
+    \leavevmode%
+    #2%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[sep=0pt, wd=\myrightmargin, dp=1ex, ht=#1]{footline}
+  \end{beamercolorbox}%
+}
 
 \defbeamertemplate*{frametitle}{pureminimalistictitle}{
   \vskip 10pt
@@ -82,44 +112,58 @@
   \end{beamercolorbox}
 }%
 
-\defbeamertemplate*{footline}{pureminimalisticfooter}{%
-  \ifthenelse{\boolean{nofooter}}{}{%
-    \leavevmode
-    \begin{beamercolorbox}[sep=0pt, wd=\myleftmargin, ht=\myfooterheight, dp=1ex]{footline}
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[sep=0pt, wd=\mytextlength, ht=\myfooterheight, dp=1ex]{footline}
-      \parbox{\linewidth}%
-      % Don't ask me why I had to insert a space/character after \usebeamercolor
-      % for it to have an effect on \hrule. Same goes for \color{white} \hrule
-      { \usebeamercolor[fg]{normal text}\ \hrule }
-      \leavevmode
-      \begin{beamercolorbox}[sep=0mm, wd=.6\paperwidth, ht=\myfooterheight]{footline}%
-        \usebeamerfont{footline}%
-        \vbox to\myfooterheight{%
+\defbeamertemplate*{footline}{pureminimalisticfooterdefault}{%
+  \basicfooter{%
+    \myfooterheight
+  }{%
+    \begin{beamercolorbox}[sep=0mm, wd=.725\mytextlength, ht=\myfooterheight]{footline}%
+      \usebeamerfont{footline}%
+      \vbox to\myfooterheight{%
         \vfil%
         \insertshorttitle{} $~|~$ %
-        \insertshortauthor{} $\quad$ %
+        \insertshortauthor{} $\quad$%
         \insertshortsubtitle{}\par%
-        Page \insertframenumber\ifthenelse{%
-        \boolean{showmaxslides}}%
-        {/\inserttotalframenumber}%
-        {}\par%
+        \ifthenelse{\boolean{nofooterlogo}}{}{
+          \showpagenum
+        }
+        \par%
         \vfil%
         \vfil%
-        }%
-      \end{beamercolorbox}%
-      \begin{beamercolorbox}[sep=0mm, wd=.275\paperwidth,right, ht=\myfooterheight]{footline}
-        \vbox to\myfooterheight{%
+      }
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[sep=0mm, wd=.275\mytextlength,right, ht=\myfooterheight]{footline}
+      \vbox to\myfooterheight{%
         \vfil%
         \logofooter
         \vfil%
-        \vfil%
-        }%
-      \end{beamercolorbox}%
+      }%
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[sep=0pt, wd=\myrightmargin, dp=1ex, ht=\myfooterheight]{footline}
-    \end{beamercolorbox}
+  }
+}
+
+\defbeamertemplate{footline}{pureminimalisticfooternologo}{%
+  \basicfooter{%
+    \myfooterheight
+  }{%
+      \vbox to\myfooterheight{%
+      \vfil%
+      \insertshorttitle{} $~|~$ %
+      \insertshortauthor{} $\quad$%
+      \insertshortsubtitle{}%
+      \hfill \showpagenum%
+      \par\vfil\vfil
     }
   }
-  
+}
+
+\defbeamertemplate{footline}{pureminimalisticfooterdisable}{}
+
+\ifthenelse{\boolean{nofooter}}{
+  \setbeamertemplate{footline}[pureminimalisticfooterdisable]
+}{}
+
+\ifthenelse{\boolean{nofooterlogo}}{
+  \setbeamertemplate{footline}[pureminimalisticfooternologo]
+}{}
+
 \mode<all>

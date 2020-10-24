@@ -26,8 +26,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{tikz}
-\usetheme[showmaxslides, darkmode]{pureminimalistic}
-
+\usetheme[darkmode, showmaxslides]{pureminimalistic}
+% \renewcommand{\pageword}{}
+% \renewcommand{\logoheader}{\vspace{1.5em}}
 \usepackage[backend=biber, doi=false, maxbibnames=2, maxcitenames=2,%
             style=numeric, sorting=none, url=false, eprint=false]{biblatex}
 \addbibresource{demo_bib.bib}
@@ -208,7 +209,11 @@ always longer than you would expect}
   To disable the logo, overwrite the default logo command with an empty
   command.
   \begin{verbatim}
- \renewcommand{\logofooter}{}
+ \renewcommand{\logoheader}{}
+  \end{verbatim}
+  You may want to add some vertical space if you wish to delete the \texttt{logoheader}.
+  \begin{verbatim}
+ \renewcommand{\logoheader}{\vspace{1.5em}}
   \end{verbatim}
 \end{frame}
 
@@ -261,7 +266,6 @@ always longer than you would expect}
 \end{frame}
 }
 
-
 \section{Footer options}
 \begin{frame}[fragile]{Disable footer}
   If you do not want to use a footer, disable it with:
@@ -280,6 +284,22 @@ always longer than you would expect}
   Usually, I prefer to not show the maximum number of
   slides, as the people tend to lose focus if they know
   the last few slides are shown.
+\end{frame}
+
+\begin{frame}[fragile]{Remove footer logo}
+  If you wish to remove the footer logo \emph{and}
+  move the page number to the right parts use:
+  \begin{verbatim}
+    \usetheme[nofooterlogo]{pureminimalistic}
+  \end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Change Page word}
+  If you wish to remove or change the word \emph{Page}
+  in the footer, change the value with
+  \begin{verbatim}
+    \renewcommand{\pageword}{Seite}
+  \end{verbatim}
 \end{frame}
 
 \section{Citations}
