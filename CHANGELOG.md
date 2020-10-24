@@ -1,3 +1,15 @@
+# v1.3.0 (Sat Oct 24 2020)
+
+#### 🚀 Enhancement
+
+- kai-tub/issue45 [#54](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/54) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 1
+
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v1.2.6 (Fri Oct 23 2020)
 
 #### 🐛 Bug Fix
