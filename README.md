@@ -236,6 +236,25 @@ set the `nofooter` option:
 
 ![no-footer](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/no_footer.png)
 
+**Replace footer logo with page count**
+
+To remove the footer logo and instead move the page description
+to that position use the `nofooterlogo` option:
+```latex
+\usetheme[nofooterlogo, darkmode]{pureminimalistic}
+```
+
+![no-footer-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/no_footer_logo.png)
+
+**Customize word for Page in footer**
+
+To change the word _Page_ in the footer, define a different word with:
+```latex
+\renewcommand{\pageword}{Seite}
+```
+
+![custom-page-word](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/custom_page_word.png)
+
 # Release status
 The next steps and thoughts about the upcoming release
 with possible features can be seen on the [project
