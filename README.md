@@ -45,6 +45,7 @@ To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalis
 - [License](#license)
 - [Contributing](#contributing)
 - [Contact](#contact)
+- [Other great beamer themes](#other-great-beamer-themes)
 
 # Main goals
 - The theme produces no warnings
@@ -273,3 +274,7 @@ As always, PRs are welcome. :)
 If you have any comments, issues, or suggestions, please
 open an issue on GitHub. 
 I will try my best to help as much as I can. :)
+
+# Other great beamer themes
+If you want to check out other awesome LaTeX beamer themes take a look
+at the [ultimate-beamer-theme-list](https://github.com/martinbjeldbak/ultimate-beamer-theme-list) by [Martin Bjeldbak Madsen](https://github.com/martinbjeldbak)!
