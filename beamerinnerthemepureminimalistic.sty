@@ -84,7 +84,7 @@
 
 \defbeamertemplate*{title page}{pureminimalistic}[1][]
 {
-  \usebeamerfont{presentation title}
+  \usebeamerfont{title}
   \begin{beamercolorbox}[sep=0ex,wd=\textwidth,dp=1ex]{headline}
     \vskip 3pt
     \hfill\logotitle\par% \logotitle is defined in outertheme
@@ -96,7 +96,7 @@
 
       \begin{beamercolorbox}[wd=\textwidth,dp=1ex]{author}%
         \vskip 3pt
-        \small\usebeamerfont{author}\usebeamercolor{author}\insertauthor $\quad$
+        \usebeamerfont{author}\usebeamercolor{author}\insertauthor $\quad$
         \ifx\insertinstitute\@empty%
           \else%
           {\usebeamerfont{institute}\insertinstitute $\quad$}%
