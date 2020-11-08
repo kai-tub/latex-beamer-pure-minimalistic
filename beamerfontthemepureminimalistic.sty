@@ -50,7 +50,8 @@
 %         \RequirePackage{FiraMono}
 %     }
 % }
-
+\RequirePackage{fontspec}
+\newfontfamily\maintextfont{Noto Sans}
 
 \renewcommand\footnotesize{\fontsize{8pt}{10pt}\selectfont}
 \renewcommand\small{\fontsize{10pt}{12pt}\selectfont}
@@ -58,7 +59,7 @@
 \renewcommand\large{\fontsize{14pt}{16pt}\selectfont}
 \renewcommand\Large{\fontsize{16pt}{18pt}\selectfont}
 
-\setbeamerfont{normal text}{family=\sffamily,size=\normalsize,series=\mdseries}
+\setbeamerfont{normal text}{family=\maintextfont, size=\normalsize, series=\mdseries}
 \setbeamerfont{alerted text}{parent=normal text}
 
 \setbeamerfont{structure}{parent=normal text,series=\mdseries}
@@ -85,5 +86,7 @@
 \setbeamerfont{itemize/enumerate body}{parent=normal text}
 \setbeamerfont{itemize/enumerate subbody}{parent=itemize/enumerate body}
 \setbeamerfont{itemize/enumerate subsubbody}{parent=itemize/enumerate subbody}
+
+\usebeamerfont{normal text}
 
 \mode<all>
