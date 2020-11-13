@@ -12,7 +12,7 @@
 *.cb2
 .*.lb
 
-*old.*
+*.old.*
 *.svg
 ## Intermediate documents:
 *.dvi
