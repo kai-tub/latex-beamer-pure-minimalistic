@@ -50,36 +50,36 @@ always longer than you would expect}
 % For longer table of contents, I find it cleaner to
 % use no footline.
 \begin{frame}[plain, noframenumbering]{Outline}
-  \tableofcontents
+    \tableofcontents
 \end{frame}
 
 \section{Aspect ratio}
 \begin{frame}[fragile]{Aspect ratio}
-  This pdf uses a 16:9 aspect ratio. To utilize
-  this version, simply use:
-  \begin{verbatim}
+    This pdf uses a 16:9 aspect ratio. To utilize
+    this version, simply use:
+    \begin{verbatim}
     \documentclass[aspectratio=169]{beamer}
     \end{verbatim}
-  \vfill
-  The default is a 4:3 aspect ratio.
-  \begin{verbatim}
+    \vfill
+    The default is a 4:3 aspect ratio.
+    \begin{verbatim}
     \documentclass{beamer}
   \end{verbatim}
 \end{frame}
 
 \section{vfilleditems}
 \begin{frame}{Using itemize}
-  \begin{itemize}
-    \item I like it to have my bullet points
-    \item evenly spaced from one another
-    \item then few bullet points, are not crammed on
-          the upper part of the slide
-          like it is right now with itemize
-  \end{itemize}
+    \begin{itemize}
+        \item I like it to have my bullet points
+        \item evenly spaced from one another
+        \item then few bullet points, are not crammed on
+              the upper part of the slide
+              like it is right now with itemize
+    \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Using vfilleditems}
-  \begin{verbatim}
+    \begin{verbatim}
     Use the provided \vfilleditems environment 
     to create nicely spaced bullet points.
 
@@ -93,66 +93,66 @@ always longer than you would expect}
 \end{frame}
 
 \begin{frame}{Using vfilleditems}
-  \begin{vfilleditems}
-    \item I like it to have my bullet points
-    \item evenly spaced from one another
-    \item then few bullet points, are not crammed on
-    the upper part of the slide
-  \end{vfilleditems}
+    \begin{vfilleditems}
+        \item I like it to have my bullet points
+        \item evenly spaced from one another
+        \item then few bullet points, are not crammed on
+        the upper part of the slide
+    \end{vfilleditems}
 \end{frame}
 
 \begin{frame}{Using vfilleditems}
-  \begin{vfilleditems}
-    \item Note that the overlay specification
-    is a bit different to \emph{itemize}
-    \item For grouped overlay specifications, simply add it
-    directly after the environment:
     \begin{vfilleditems}
-      \item \texttt{\textbackslash{}begin\{vfilleditems\}<+->}
+        \item Note that the overlay specification
+        is a bit different to \emph{itemize}
+        \item For grouped overlay specifications, simply add it
+        directly after the environment:
+        \begin{vfilleditems}
+            \item \texttt{\textbackslash{}begin\{vfilleditems\}<+->}
+        \end{vfilleditems}
     \end{vfilleditems}
-  \end{vfilleditems}
 \end{frame}
 
 
 \section{Fonts}
 \begin{frame}[fragile]{Fonts}
-  Fonts:
+    Fonts:
 
-  {\small This is small}
+    {\small This is small}
 
-  This is normal size
+    This is normal size
 
-    {\large This is large}
-  \vfill
-  Per default the \emph{Fira Font} Package is
-  used. The \emph{Helvetica Font} is also bundled into this
-  package.
+        {\large This is large}
+    \vfill
+    Per default the \emph{Fira Font} Package is
+    used. The \emph{Noto Font} is also bundled into this
+    package.
 \end{frame}
 
 \begin{frame}[fragile]{Fonts}
-  To use \emph{Helvetica} instead of \emph{Fira Fonts}
-  \begin{verbatim}
-    \usetheme[helvetica]{pureminimalistic}
+    To use \emph{Noto} instead of \emph{Fira Fonts}
+    \begin{verbatim}
+    \usetheme[noto]{pureminimalistic}
   \end{verbatim}
-  \vfill
-  To disable the \emph{Fira Fonts} and use the default font
-  \begin{verbatim}
-    \usetheme[nofirafonts]{pureminimalistic}
+    \vfill
+    To disable the \emph{Fira Fonts} and use the default font
+    \begin{verbatim}
+    \usetheme[customfont]{pureminimalistic}
   \end{verbatim}
 \end{frame}
 
 \section{Color}
 \begin{frame}[fragile]{Color}
-  To overwrite the theme color
-  \begin{enumerate}
-    \item Define a new color
-    \item redefine the themes color (before document begins)
-  \end{enumerate}
+    To overwrite the theme color
+    \begin{enumerate}
+        \item Define a new color
+        \item redefine the themes color (before document begins)
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}[fragile]{Change color example}
-  \small
-  \begin{verbatim}
+    \small
+    \begin{verbatim}
   \usetheme{pureminimalistic}
   \definecolor{textcolor}{RGB}{0, 0, 120}
   \definecolor{title}{RGB}{0, 0, 0}
@@ -167,35 +167,35 @@ always longer than you would expect}
 \end{frame}
 
 \begin{frame}[fragile]{Dark mode}
-  I've included a simple way to use a dark mode
-  color theme. To use the dark color mode, provide the \texttt{darkmode}
-  option.
-  \begin{verbatim}
+    I've included a simple way to use a dark mode
+    color theme. To use the dark color mode, provide the \texttt{darkmode}
+    option.
+    \begin{verbatim}
     \usetheme[darkmode]{pureminimalistic}
     \end{verbatim}
-  Sometimes, the logos have to be changed to look nice on a
-  dark background. For now, I am simply loading different
-  files if \texttt{darkmode} is used.
+    Sometimes, the logos have to be changed to look nice on a
+    dark background. For now, I am simply loading different
+    files if \texttt{darkmode} is used.
 \end{frame}
 
 \section{Graphics}
 \begin{frame}{Logos}
-  Commands setting the logos:
-  \begin{itemize}
-    \item \texttt{\textbackslash{}logotitle} -- Command used for the title page.
-          Here \texttt{\textbackslash{}linewidth} corresponds to the entire paper width.
-    \item \texttt{\textbackslash{}logoheader} -- Command used for the header.
-          Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
-          as the horizontal space is shared with the title.
-    \item \texttt{\textbackslash{}logofooter} -- Command used for the footer.
-          Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
-          as the horizontal space is shared with the footer text.
-  \end{itemize}
+    Commands setting the logos:
+    \begin{itemize}
+        \item \texttt{\textbackslash{}logotitle} -- Command used for the title page.
+              Here \texttt{\textbackslash{}linewidth} corresponds to the entire paper width.
+        \item \texttt{\textbackslash{}logoheader} -- Command used for the header.
+              Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
+              as the horizontal space is shared with the title.
+        \item \texttt{\textbackslash{}logofooter} -- Command used for the footer.
+              Here \texttt{\textbackslash{}linewidth} corresponds to a smaller box,
+              as the horizontal space is shared with the footer text.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Logos -- Load own logo}
-  To use your own logos, simply redefine the commands and adjust the sizes.
-  \begin{verbatim}
+    To use your own logos, simply redefine the commands and adjust the sizes.
+    \begin{verbatim}
  \renewcommand{\logotitle}{\includegraphics%
    [width=.2\linewidth]{alternative_logo/gameboy.png}}
  \renewcommand{\logoheader}{\includegraphics%
@@ -206,40 +206,40 @@ always longer than you would expect}
 \end{frame}
 
 \begin{frame}[fragile]{Logos -- Disable logo}
-  To disable the logo, overwrite the default logo command with an empty
-  command.
-  \begin{verbatim}
+    To disable the logo, overwrite the default logo command with an empty
+    command.
+    \begin{verbatim}
  \renewcommand{\logoheader}{}
   \end{verbatim}
-  You may want to add some vertical space if you wish to delete the \texttt{logoheader}.
-  \begin{verbatim}
+    You may want to add some vertical space if you wish to delete the \texttt{logoheader}.
+    \begin{verbatim}
  \renewcommand{\logoheader}{\vspace{1.5em}}
   \end{verbatim}
 \end{frame}
 
 \begin{frame}{Figures}
-  I also changed the default caption settings to not
-  include \texttt{Figure:} and reduced the font size.
-  \begin{figure}[H]
-    \centering
-    \begin{columns}[T]
-      \begin{column}{.3\linewidth}
-        \includegraphics[width=\linewidth]{example-image-a}
-        \caption{Example A}
-      \end{column}
-      \begin{column}{.3\linewidth}
-        \includegraphics[width=\linewidth]{example-image-b}
-        \caption{Example B}
-      \end{column}
-    \end{columns}
-  \end{figure}
+    I also changed the default caption settings to not
+    include \texttt{Figure:} and reduced the font size.
+    \begin{figure}[H]
+        \centering
+        \begin{columns}[T]
+            \begin{column}{.3\linewidth}
+                \includegraphics[width=\linewidth]{example-image-a}
+                \caption{Example A}
+            \end{column}
+            \begin{column}{.3\linewidth}
+                \includegraphics[width=\linewidth]{example-image-b}
+                \caption{Example B}
+            \end{column}
+        \end{columns}
+    \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]{Figures -- Set background watermark}
-  There is no extra option to define a background watermark, but here
-  is a command that could be used to create one manually:
-  \vfill
-  \begin{verbatim}
+    There is no extra option to define a background watermark, but here
+    is a command that could be used to create one manually:
+    \vfill
+    \begin{verbatim}
 \setbeamertemplate{background}{%
   \tikz[overlay,remember picture]%
   \node[opacity=0.8]at (current page.center)%
@@ -251,86 +251,86 @@ always longer than you would expect}
 
 {
 \setbeamertemplate{background}{%
-  \tikz[overlay,remember picture]%
-  \node[opacity=0.8]at (current page.center)%
-  {\includegraphics[width=.2\linewidth]%
-    {example-image-a}};%
+    \tikz[overlay,remember picture]%
+    \node[opacity=0.8]at (current page.center)%
+    {\includegraphics[width=.2\linewidth]%
+        {example-image-a}};%
 }
 \begin{frame}{Figures -- Set background watermark}
-  Usually you would add this command to specific
-  frames by enclosing this command and all desired frames with
-  curly brackets.
-  \vfill
-  See the source code of this \emph{*.tex} file for an
-  example.
+    Usually you would add this command to specific
+    frames by enclosing this command and all desired frames with
+    curly brackets.
+    \vfill
+    See the source code of this \emph{*.tex} file for an
+    example.
 \end{frame}
 }
 
 \section{Footer options}
 \begin{frame}[fragile]{Disable footer}
-  If you do not want to use a footer, disable it with:
-  \begin{verbatim}
+    If you do not want to use a footer, disable it with:
+    \begin{verbatim}
     \usetheme[nofooter]{pureminimalistic}
   \end{verbatim}
 \end{frame}
 
 \begin{frame}[fragile]{Show max slide numbers}
-  For these slides, I used the option to
-  show the maximum number of slides. To activate it
-  one has to activate it with:
-  \begin{verbatim}
+    For these slides, I used the option to
+    show the maximum number of slides. To activate it
+    one has to activate it with:
+    \begin{verbatim}
     \usetheme[showmaxslides]{pureminimalistic}
   \end{verbatim}
-  Usually, I prefer to not show the maximum number of
-  slides, as the people tend to lose focus if they know
-  the last few slides are shown.
+    Usually, I prefer to not show the maximum number of
+    slides, as the people tend to lose focus if they know
+    the last few slides are shown.
 \end{frame}
 
 \begin{frame}[fragile]{Remove footer logo}
-  If you wish to remove the footer logo \emph{and}
-  move the page number to the right parts use:
-  \begin{verbatim}
+    If you wish to remove the footer logo \emph{and}
+    move the page number to the right parts use:
+    \begin{verbatim}
     \usetheme[nofooterlogo]{pureminimalistic}
   \end{verbatim}
 \end{frame}
 
 \begin{frame}[fragile]{Change Page word}
-  If you wish to remove or change the word \emph{Page}
-  in the footer, change the value with
-  \begin{verbatim}
+    If you wish to remove or change the word \emph{Page}
+    in the footer, change the value with
+    \begin{verbatim}
     \renewcommand{\pageword}{Seite}
   \end{verbatim}
 \end{frame}
 
 \section{Citations}
 \begin{frame}{Citations}
-  I've also changed the bibliography options to be minimalistic:
+    I've also changed the bibliography options to be minimalistic:
 
-  Just showing a simple \texttt{\textbackslash{}cite} \cite{AlexNet}
-  \vfill
-  \printbibliography
+    Just showing a simple \texttt{\textbackslash{}cite} \cite{AlexNet}
+    \vfill
+    \printbibliography
 \end{frame}
 
 \appendix % do not count the following slides for the total number
 \section*{Backup Slides}
 \begin{frame}[plain, noframenumbering]
-  \centering
-  \vfill
-  {\fontsize{40}{50}\selectfont Backup Slides}
-  \vfill
+    \centering
+    \vfill
+    {\fontsize{40}{50}\selectfont Backup Slides}
+    \vfill
 \end{frame}
 
 \begin{frame}{What happened to the page numbering?}
-  \begin{itemize}
-    \item I've used the \texttt{appendixnumberbeamer}
-          package, which resets the frame counting after calling
-          \texttt{\textbackslash{}appendix}
-    \item Depending on the used pdf viewer, the total
-          count of frames shouldn't include the backup slides and
-          won't demotivate the audience.
-    \item Usually, I would use a \texttt{plain} frame
-          for the backup slides.
-  \end{itemize}
+    \begin{itemize}
+        \item I've used the \texttt{appendixnumberbeamer}
+              package, which resets the frame counting after calling
+              \texttt{\textbackslash{}appendix}
+        \item Depending on the used pdf viewer, the total
+              count of frames shouldn't include the backup slides and
+              won't demotivate the audience.
+        \item Usually, I would use a \texttt{plain} frame
+              for the backup slides.
+    \end{itemize}
 \end{frame}
 
 \end{document}

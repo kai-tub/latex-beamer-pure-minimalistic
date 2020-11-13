@@ -1,0 +1,58 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme[darkmode, showmaxslides]{pureminimalistic}
+
+% if loaded after begin{document} a warning will appear: "pdfauthor already used"
+\title[عنوان قصير]{هذا هو الطول الطبيعي لورقة البحث:
+دائمًا أطول مما تتوقعورمان كلاسين}
+\institute{اسم المعهد}
+\author{كاي نورمان كلاسين}
+\renewcommand{\pageword}{الصفحة}
+\date{\today}
+
+% csquotes is a recommended package for babel
+\usepackage{csquotes}
+\usepackage[bidi=basic]{babel}
+\babelprovide[main, import, onchar=ids fonts]{arabic}
+\babelprovide[import, onchar=ids fonts]{english}
+% Loading font with relative location
+% I am using it only for CI/CD pipeline!
+% You should install the font system-wide and access it
+% like any other system-wide font in fontspec
+\defaultfontfeatures[NotoKufiArabic]{
+  Extension = .ttf,
+  UprightFont = */*-Regular,
+  BoldFont = */*-Bold
+}
+\babelfont[*arabic]{sf}{NotoKufiArabic}
+\babelfont[english]{sf}{Fira Sans}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{مقارنة}
+  اهلا كيف انت؟
+  \begin{columns}[T]
+    \begin{column}{.49\linewidth}
+      \selectlanguage{english}
+      \begin{vfilleditems}
+        \item Short example with a different language
+        \item Hi
+        \item how
+        \item are
+        \item you?
+      \end{vfilleditems}
+    \end{column}
+    \begin{column}{.49\linewidth}
+
+      \begin{vfilleditems}
+        \item مثال قصير بلغات مختلفة
+        \item مرحبا
+        \item اهلا
+        \item كيف
+        \item انت؟
+      \end{vfilleditems}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}

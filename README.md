@@ -48,12 +48,12 @@ To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalis
 - [Other great beamer themes](#other-great-beamer-themes)
 
 # Main goals
-- The theme produces no warnings
 - It should be looking *good* in a 4:3 and 16:9 aspect ratio, without the need to change anything.
 - Provides an environment for vertical-spaced items
 - Easy option to either use light- or dark-mode
 - Is designed to be purely minimalistic without any distractions 
 - Easily use own logos
+- Should support different languages without too many changes
 
 # Demo
 A sample document can be seen in the
@@ -194,24 +194,23 @@ the [Focus beamer theme](https://github.com/elauksap/focus-beamertheme).
 ![fira-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/fira_font.png)
 
 Some dislike the Fira Fonts. As an alternative, this
-theme also integrates the *Helvetica* fonts.
-The Helvetica fonts are a classical font choice for presentations.
+theme also integrates the *Noto* fonts.
 
-To use the Helvetica fonts:
-
-```latex
-\usetheme[helvetica, darkmode]{pureminimalistic}
-```
-
-![helvetica-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/helvetica_font.png)
-
-If you prefer the default fonts, disable the Fira Fonts with:
+To use the Noto fonts:
 
 ```latex
-\usetheme[nofirafonts, darkmode]{pureminimalistic}
+\usetheme[noto, darkmode]{pureminimalistic}
 ```
 
-![helvetica-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/default_font.png)
+![noto-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/noto_font.png)
+
+If you prefer the default fonts _or_ load your own fonts, disable the Fira Fonts with:
+
+```latex
+\usetheme[customfont, darkmode]{pureminimalistic}
+```
+
+![default-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/default_font.png)
 
 ## Footer options
 

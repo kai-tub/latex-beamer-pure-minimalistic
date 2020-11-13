@@ -1,0 +1,51 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme[darkmode, showmaxslides]{pureminimalistic}
+
+% if loaded after begin{document} a warning will appear: "pdfauthor already used"
+\title[短いタイトル]{これは、研究論文の通常の長さです。
+いつもあなたが期待するよりも長い}
+\institute{研究所}
+\author{カイノーマンクラセン}
+\renewcommand{\pageword}{ページ}
+\date{\today}
+
+% csquotes is a recommended package for babel
+\usepackage{csquotes}
+\usepackage{babel}
+\usepackage[match]{luatexja-fontspec}
+\defaultfontfeatures[NotoSansJP]{
+  Extension = .otf,
+  UprightFont = */*-Regular
+}
+
+\babelprovide[import]{english}
+\babelfont[english]{sf}{Fira Sans}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{比較}
+  こんにちは、元気ですか？
+
+  \begin{columns}[T]
+    \begin{column}{.49\linewidth}
+      \selectlanguage{english}
+      \begin{vfilleditems}
+        \item Short example with a different language
+        \item Hi
+        \item how
+        \item are
+        \item you?
+      \end{vfilleditems}
+    \end{column}
+    \begin{column}{.49\linewidth}
+
+      \begin{vfilleditems}
+        \item こんにちは
+        \item 元気ですか？
+      \end{vfilleditems}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}
