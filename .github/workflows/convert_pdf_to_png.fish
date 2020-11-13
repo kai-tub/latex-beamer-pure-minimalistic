@@ -25,6 +25,20 @@ function convert_compare_examples
     montage ./compare_examples/pureminimalistic_example_light.tmp.png ./compare_examples/defaultbeamer_example.tmp.png -geometry +2+2 -tile 2x -background gray ./compare_examples/comparison_light.png
 end
 
+function convert_multi_lang_examples
+    set files (find ./multi_lang_examples -type d -path '*/.git' -prune -o -name '*.lua.pdf' -print)
+
+    for file_ in $files
+        echo "$file_"
+        set convert_target (string replace -r '(.*)\.pdf' '$1-%02d.tmp.png' "$file_")
+        set montage_source (string replace -r '(.*)\.pdf' '$1-*.png' "$file_")
+        set montage_target (string replace -r '(.*)\.pdf' '$1.tmp.png' "$file_")
+        convert -density 300 "$file_" "$convert_target"
+        montage "$montage_source" -geometry +10+10 -tile 1x -background gray -colorspace RGB "$montage_target"
+    end
+    montage ./multi_lang_examples/*.pdf -geometry +2+2 -tile 2x -background gray ./multi_lang_examples/lang_comparison.png
+end
+
 function convert_demo
     convert -density 300 beamertheme-pure-minimalistic-demo.pdf beamertheme-pure-minimalistic-demo-%02d.tmp.png
     montage beamertheme-pure-minimalistic-demo-*.png -geometry +10+10 -tile 4x -background gray beamertheme-pure-minimalistic-demo.png
@@ -35,3 +49,4 @@ apk add --no-cache imagemagick
 convert_demo
 convert_minimal_examples
 convert_compare_examples
+convert_multi_lang_examples
