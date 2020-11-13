@@ -1,3 +1,19 @@
+# v2.0.0 (Fri Nov 13 2020)
+
+#### 💥 Breaking Change
+
+- _Support_ all pdf engines by not requiring anything [#60](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/60) ([@kai-tub](https://github.com/kai-tub))
+
+#### 📝 Documentation
+
+- Update README.md [#55](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/55) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 1
+
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v1.3.0 (Sat Oct 24 2020)
 
 #### 🚀 Enhancement
