@@ -31,7 +31,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install missing packages
         run: |
-          tlmgr update --self && tlmgr install silence appendixnumberbeamer fira fontaxes mwe noto csquotes babel luatexja
+          tlmgr update --self && tlmgr install silence appendixnumberbeamer fira fontaxes mwe noto csquotes fontspec babel luatexja
+          luaotfload-tool --update --force
       - name: Build minimal examples with pdfLaTeX
         working-directory: minimal_examples/
         run: |
