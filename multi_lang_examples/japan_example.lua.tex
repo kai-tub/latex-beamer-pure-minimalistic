@@ -12,7 +12,12 @@
 % csquotes is a recommended package for babel
 \usepackage{csquotes}
 \usepackage{babel}
-\usepackage{luatexja}
+\usepackage[match]{luatexja-fontspec}
+\defaultfontfeatures[NotoSansJP]{
+  Extension = .otf,
+  UprightFont = */*-Regular
+}
+
 \babelprovide[import]{english}
 \babelfont[english]{sf}{Fira Sans}
 
