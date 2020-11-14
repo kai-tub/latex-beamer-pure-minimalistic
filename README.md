@@ -14,7 +14,7 @@ A presentation theme for LaTeX-Beamer that is truly
 minimalistic, so that the focus is on the presenter and
 not on the slides.
 
-Requires the packages [fira](https://ctan.org/pkg/fira) and
+Requires the packages [fira](https://ctan.org/pkg/fira), [noto](https://ctan.org/pkg/noto), and
 [silence](https://ctan.org/pkg/silence)
 to be installed on your system.
 To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex) file, 
@@ -23,7 +23,6 @@ To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalis
 [fontaxes](https://ctan.org/pkg/fontaxes), and
 [mwe](https://ctan.org/pkg/mwe) are also required.
 
-<!-- <a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee" style="height: 20px !important;width: 81px !important;" ></a> -->
 <a href="https://www.buymeacoffee.com/kaitub" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee" width="162px" height="40px"/></a>
 
 </div>
@@ -36,11 +35,13 @@ To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalis
   - [Light mode](#light-mode)
 - [Download](#download)
 - [Instructions](#instructions)
+- [Multi-language support](#multi-language-support)
 - [Customize](#customize)
   - [Customize Logos](#customize-logos)
   - [Color](#color)
   - [Fonts](#fonts)
   - [Footer options](#footer-options)
+- [Extras](#extras)
 - [Release status](#release-status)
 - [License](#license)
 - [Contributing](#contributing)
@@ -108,7 +109,27 @@ LaTeX source file. Then include the theme by writing:
 
 \usetheme[]{pureminimalistic}
 ```
- 
+
+# Multi-language support
+The beamer theme allows users to choose their favorite _LaTeX engine_.
+As a result, the theme does not even try to enforce any hard
+requirements.
+
+The user should set the correct language and font settings, not
+the theme. The theme comes with preloaded fonts, to allow
+most _Latin script-based_ countries to use the theme without any
+changes, but is easy to configure for other scripts.
+
+For a quick guide on how to use _non-latin scripts_ and
+multiple languages in one document see the
+following [multi-language README](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md). 
+
+[Here](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/multi_lang_examples/lang_comparison.png) are some examples for a _right-to-left_ language (Arabic),
+a _standard_ non-latin script (Greek) and a language with special
+typographical requirements (Japanese):
+
+[![multi-lang-examples](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/multi_lang_examples/lang_comparison.png)](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md)
+
 # Customize
 
 All options and commands are also described in detail in the
@@ -123,7 +144,7 @@ folder `logos` relative to the `.sty` file with the names:
 But you can easily change the logos used.
 There are 3 commands used to define which logos
 are used and how they are formatted:
-- `\logotitle` – Command used for title page. Here `\linewidth`
+- `\logotitle` – Command used for the title page. Here `\linewidth`
   corresponds to the entire paper width.
 - `\logoheader` – Command used for the header. Here `\linewidth`
   corresponds to a smaller box, as the horizontal space is
@@ -204,13 +225,20 @@ To use the Noto fonts:
 
 ![noto-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/noto_font.png)
 
-If you prefer the default fonts _or_ load your own fonts, disable the Fira Fonts with:
+If you prefer the default fonts _or_ load custom fonts, disable the Fira Fonts with:
 
 ```latex
 \usetheme[customfont, darkmode]{pureminimalistic}
 ```
 
 ![default-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/default_font.png)
+
+For more information on how to load the custom fonts or
+use multiple languages in a document, see the [multi-language README](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md).
+
+**Important:** By default `beamer` uses _sans-serif_ fonts,
+so if you define your own font-settings, be sure to set
+sans-serif and not the default font settings!
 
 ## Footer options
 
@@ -254,6 +282,21 @@ To change the word _Page_ in the footer, define a different word with:
 ```
 
 ![custom-page-word](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/custom_page_word.png)
+
+# Extras
+This theme also provides a new environment `vfilleditems`.
+It automatically inserts space between items, depending
+on the remaining space. Use it with:
+
+```latex
+\begin{vfilleditems}
+  \item My first point
+  \item My second point
+  \item My third point
+\end{vfilleditems}
+```
+
+![vfilleditems](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/vfilleditems.png)
 
 # Release status
 The next steps and thoughts about the upcoming release
