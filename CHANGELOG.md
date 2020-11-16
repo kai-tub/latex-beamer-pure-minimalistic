@@ -1,3 +1,24 @@
+# v2.0.1 (Mon Nov 16 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Julius Schaaf ([@schaafjs](https://github.com/schaafjs)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Fix typo in demo document [#63](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/63) ([@schaafjs](https://github.com/schaafjs))
+
+#### 📝 Documentation
+
+- Add multi_lang documentation [#61](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/61) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 2
+
+- Julius Schaaf ([@schaafjs](https://github.com/schaafjs))
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v2.0.0 (Fri Nov 13 2020)
 
 #### 💥 Breaking Change
