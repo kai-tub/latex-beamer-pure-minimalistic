@@ -6,11 +6,15 @@ If you are interested in contributing, there are many ways to help out:
    - Report issues you're facing
    - Give a :+1: on issues that others reported and that are relevant to you
    - Spread the word about the project or simply :star: to say "I use it!"
-2. You would like to improve the documentation. Improving the documentation is no less important than improving the theme itself!
+1. You would like to improve the documentation. Improving the documentation is no less important than improving the theme itself!
 If you find a typo in the documentation, do not hesitate to submit a GitHub pull request.
-3. You would like to propose a new feature and implement it
-   - Choose the corresponding issue template and fill out the required information. Once we agree that the plan looks good,
-   go ahead, and implement it.
+1. You would like to propose a new feature and implement it
+   - Open a [discussion](https://github.com/kai-tub/latex-beamer-pure-minimalistic/discussions?discussions_q=category%3AIdeas) and tell us about your goal and a rough sketch on how you would like to implement it. Once we agree that the plan looks good, feel free to start working on your first *pull request*.
+1. You can also help by using the [dicussion](https://github.com/kai-tub/latex-beamer-pure-minimalistic/discussions/64) section:
+   - Ask questions, so that others with the same issue can quickly find a solution
+   - Show us what you have created to inspire us and other community members
+   - Propose enhancements or point out missing features
+   - Give us feedback
 
 If you want to, you can also buy us a coffee if you like: 
 
