@@ -1,7 +1,7 @@
 <div align="center">
 
 ![Pure Minimalistic Theme](logos/institute_logo_darkmode.png)
-[![Release](https://badgen.net/github/release/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases) 
+[![Release](https://badgen.net/github/release/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases)
 [![GitHub license](https://badgen.net/github/license/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/blob/master/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?color=blue)](CODE_OF_CONDUCT.md)
 [![GitHub Dicussions](https://badgen.net/badge/GitHub%20Discussions/Enabled?color=blue&icon=github)](https://github.com/kai-tub/latex-beamer-pure-minimalistic/discussions)
@@ -18,8 +18,8 @@ not on the slides.
 Requires the packages [fira](https://ctan.org/pkg/fira), [noto](https://ctan.org/pkg/noto), and
 [silence](https://ctan.org/pkg/silence)
 to be installed on your system.
-To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex) file, 
-[PGF/TikZ](https://ctan.org/pkg/pgf), 
+To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalistic-demo.tex) file,
+[PGF/TikZ](https://ctan.org/pkg/pgf),
 [appendixnumberbeamer](https://ctan.org/pkg/appendixnumberbeamer),
 [fontaxes](https://ctan.org/pkg/fontaxes), and
 [mwe](https://ctan.org/pkg/mwe) are also required.
@@ -53,7 +53,7 @@ To build the [beamertheme-pure-minimalistic-demo.tex](beamertheme-pure-minimalis
 - It should be looking *good* in a 4:3 and 16:9 aspect ratio, without the need to change anything.
 - Provides an environment for vertical-spaced items
 - Easy option to either use light- or dark-mode
-- Is designed to be purely minimalistic without any distractions 
+- Is designed to be purely minimalistic without any distractions
 - Easily use own logos
 - Should support different languages without too many changes
 
@@ -83,7 +83,7 @@ Beamer presentations and is available on all major OS!
 
 # Comparison
 To show some differences between the default LaTeX beamer
-theme and the pure minimalistic beamer theme 
+theme and the pure minimalistic beamer theme
 (inspired by the [auriga beamer theme](https://github.com/anishathalye/auriga)):
 
 ## Dark mode
@@ -123,7 +123,7 @@ changes, but is easy to configure for other scripts.
 
 For a quick guide on how to use _non-latin scripts_ and
 multiple languages in one document see the
-following [multi-language README](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md). 
+following [multi-language README](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md).
 
 [Here](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/multi_lang_examples/lang_comparison.png) are some examples for a _right-to-left_ language (Arabic),
 a _standard_ non-latin script (Greek) and a language with special
@@ -138,9 +138,9 @@ All options and commands are also described in detail in the
 
 ## Customize Logos
 By default, the theme expects the logos to be present in a
-folder `logos` relative to the `.sty` file with the names: 
-`header_logo`, `header_logo_darkmode`, 
-`institute_logo`, and `institute_logo_darkmode`. 
+folder `logos` relative to the `.sty` file with the names:
+`header_logo`, `header_logo_darkmode`,
+`institute_logo`, and `institute_logo_darkmode`.
 
 But you can easily change the logos used.
 There are 3 commands used to define which logos
@@ -209,7 +209,7 @@ could be used:
 ![custom-color](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/custom_color.png)
 
 ## Fonts
-The default fonts are the [Fira Fonts](https://bboxtype.com/typefaces/FiraSans/#!layout=specimen). 
+The default fonts are the [Fira Fonts](https://bboxtype.com/typefaces/FiraSans/#!layout=specimen).
 This decision was inspired by another awesome beamer theme,
 the [Focus beamer theme](https://github.com/elauksap/focus-beamertheme).
 
@@ -302,10 +302,10 @@ on the remaining space. Use it with:
 # Release status
 The next steps and thoughts about the upcoming release
 with possible features can be seen on the [project
-page](https://github.com/kai-tub/latex-beamer-pure-minimalistic/projects/1). 
+page](https://github.com/kai-tub/latex-beamer-pure-minimalistic/projects/1).
 
 # License
-This software is released under the GNU GPL v3.0 
+This software is released under the GNU GPL v3.0
 [License](LICENSE).
 
 # Contributing
