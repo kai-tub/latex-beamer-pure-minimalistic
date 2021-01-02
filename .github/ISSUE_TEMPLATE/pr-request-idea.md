@@ -14,5 +14,5 @@ Please give a high-level description of the idea and how you would like to imple
 
 **Guidelines**
 I've read:
-- [ ] [code of conduct](https://github.com/kai-tub/latex-beamer-pure-minimalistic/blob/master/CODE_OF_CONDUCT.md)
-- [ ] [contributing guidelines](https://github.com/kai-tub/latex-beamer-pure-minimalistic/blob/master/CONTRIBUTING.md)
+- [ ] [code of conduct](https://github.com/kai-tub/latex-beamer-pure-minimalistic/blob/master/.github/CODE_OF_CONDUCT.md)
+- [ ] [contributing guidelines](https://github.com/kai-tub/latex-beamer-pure-minimalistic/blob/master/.github/CONTRIBUTING.md)

@@ -1,16 +1,16 @@
 # Comment to be posted to on first time issues
 newIssueWelcomeComment: |
   Thanks for opening your first issue here! 💖
-  Be sure to follow the issue template. 
+  Be sure to follow the issue template.
   Then the issue will be worked on in no time. 👍
 # Comment to be posted on PRs from first time contributors in your repository
 newPRWelcomeComment: |
-  Thanks for opening this pull request! 💖 
-  Please check out the [code of conduct](https://github.com/kai-tub/external-repo-sync-action/blob/master/CODE_OF_CONDUCT.md) and the [contributing guidelines](https://github.com/kai-tub/external-repo-sync-action/blob/master/CONTRIBUTING.md).
+  Thanks for opening this pull request! 💖
+  Please check out the [code of conduct](https://github.com/kai-tub/external-repo-sync-action/blob/master/.github/CODE_OF_CONDUCT.md) and the [contributing guidelines](https://github.com/kai-tub/external-repo-sync-action/blob/master/.github/CONTRIBUTING.md).
   Although, you probably have read it already. 😎
 # Comment to be posted on PR merges from first time contributors in your repository
 firstPRMergeComment: |
   Congrats on merging your first pull request! 🎉🎉🎉
   We are proud of you and your accomplishment 🏆.
-  
+
   ![thanks-for-pr-image](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/community/thanks_for_pr.jpg)
