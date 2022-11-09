@@ -96,14 +96,18 @@
 
       \begin{beamercolorbox}[wd=\textwidth,dp=1ex]{author}%
         \vskip 3pt
+        \ifx\insertsubtitle\@empty%
+          \else%
+          {\usebeamerfont{subtitle}\insertsubtitle}\vskip 4pt%
+        \fi%
         \usebeamerfont{author}\usebeamercolor{author}\insertauthor $\quad$
         \ifx\insertinstitute\@empty%
           \else%
           {\usebeamerfont{institute}\insertinstitute $\quad$}%
         \fi%
-        \ifx\insertsubtitle\@empty%
+        \ifx\insertdate\@empty%
           \else%
-          {\usebeamerfont{subtitle}\insertsubtitle}%
+          {\usebeamerfont{date}\insertdate}%
         \fi%
       \end{beamercolorbox}%
     }%
