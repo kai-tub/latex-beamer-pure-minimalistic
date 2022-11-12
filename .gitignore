@@ -1,3 +1,16 @@
+# cannot link to sty for windows support
+minimal_examples/*.sty
+minimal_examples/*.pdf
+minimal_examples/logos
+
+multi_lang_examples/*.sty
+multi_lang_examples/*.pdf
+multi_lang_examples/logos
+
+compare_examples/*.sty
+compare_examples/*.pdf
+compare_examples/logos
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

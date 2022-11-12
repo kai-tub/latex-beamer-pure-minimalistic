@@ -121,8 +121,12 @@
       \vbox to\myfooterheight{%
         \vfil%
         \insertshorttitle{} $~|~$ %
-        \insertshortauthor{} $\quad$%
-        \insertshortsubtitle{}\par%
+        \ifx\insertsubtitle\@empty%
+          \else%
+          \insertshortsubtitle{} $~|~$%
+        \fi%
+        \insertshortauthor{}
+        \par%
         \ifthenelse{\boolean{nofooterlogo}}{}{
           \showpagenum
         }
