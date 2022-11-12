@@ -1,3 +1,32 @@
+# v2.0.2 (Sat Nov 12 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, earnest ma ([@earnestma](https://github.com/earnestma)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Ci fix [#79](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/79) ([@kai-tub](https://github.com/kai-tub))
+- Show date in title frame [#77](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/77) ([@earnestma](https://github.com/earnestma))
+
+#### 📝 Documentation
+
+- Unify files line endings & move some files to .github [#73](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/73) ([@kai-tub](https://github.com/kai-tub))
+- Update pull_request_template.md [#72](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/72) ([@kai-tub](https://github.com/kai-tub))
+- Moved pull_request_template.md [#71](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/71) ([@kai-tub](https://github.com/kai-tub))
+- Create pull_request_template.md [#70](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/70) ([@kai-tub](https://github.com/kai-tub))
+- Update README.md [#69](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/69) ([@kai-tub](https://github.com/kai-tub))
+- Update CONTRIBUTING.md [#68](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/68) ([@kai-tub](https://github.com/kai-tub))
+- Update pr-request-idea.md [#66](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/66) ([@kai-tub](https://github.com/kai-tub))
+- Update feature_request.md [#65](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/65) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 2
+
+- earnest ma ([@earnestma](https://github.com/earnestma))
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v2.0.1 (Mon Nov 16 2020)
 
 :tada: This release contains work from a new contributor! :tada:
