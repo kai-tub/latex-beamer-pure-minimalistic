@@ -1,3 +1,15 @@
+# v2.0.3 (Mon Nov 14 2022)
+
+#### 🐛 Bug Fix
+
+- Fix subtitle footer presentation [#81](https://github.com/kai-tub/latex-beamer-pure-minimalistic/pull/81) ([@kai-tub](https://github.com/kai-tub))
+
+#### Authors: 1
+
+- Kai Norman Clasen ([@kai-tub](https://github.com/kai-tub))
+
+---
+
 # v2.0.2 (Sat Nov 12 2022)
 
 :tada: This release contains work from a new contributor! :tada:
