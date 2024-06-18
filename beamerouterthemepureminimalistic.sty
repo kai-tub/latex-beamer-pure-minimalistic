@@ -152,8 +152,11 @@
       \vbox to\myfooterheight{%
       \vfil%
       \insertshorttitle{} $~|~$ %
-      \insertshortauthor{} $\quad$%
-      \insertshortsubtitle{}%
+      \ifx\insertsubtitle\@empty%
+        \else%
+        \insertshortsubtitle{} $~|~$ %
+      \fi%
+      \insertshortauthor{}
       \hfill \showpagenum%
       \par\vfil\vfil
     }
