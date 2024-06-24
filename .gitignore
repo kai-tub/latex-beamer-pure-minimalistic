@@ -1,4 +1,5 @@
 # cannot link to sty for windows support
+result
 minimal_examples/*.sty
 minimal_examples/*.pdf
 minimal_examples/logos
