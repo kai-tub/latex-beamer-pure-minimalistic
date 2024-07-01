@@ -36,7 +36,7 @@ jobs:
           path: wiki
       - run: |
           echo "Copy documentation results to wiki"
-          cp -r ./result wiki/
+          install --mode=666 ./result wiki/
           cd wiki
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

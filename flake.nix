@@ -65,7 +65,7 @@
         tex-directory = ".";
       };
       demo-pdflatex-montage =
-        pkgs.runCommand "demo-pdflatex-pdf" {
+        pkgs.runCommand "demo-pdflatex-montage" {
           src = ./scripts;
           buildInputs = [demo-pdflatex pkgs.nushell pkgs.imagemagickBig];
         } ''
@@ -139,6 +139,7 @@
         paths = [
           multi-lang-examples-montage
           compare-examples-montage
+          demo-pdflatex
           demo-pdflatex-montage
           minimal-examples-pngs
           minimal-examples-lualatex
