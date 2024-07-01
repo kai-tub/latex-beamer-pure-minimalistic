@@ -3,95 +3,45 @@ name: Build and Release
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
-    paths:
-      - "**.tex"
-      - "**.yml"
-      - "**.sty"
-      - "**.nix"
-    branches: [ master ]
-  pull_request:
-    paths:
-      - "**.tex"
-      - "**.yml"
-      - "**.sty"
-      - "**.nix"
-    branches: [ master ]
+  - push
+  - pull_request
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     name: Build all files
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/xu-cheng/texlive-small:latest
-    defaults:
-      run:
-        shell: sh
     steps:
-      - name: Set up repo
-        uses: actions/checkout@v2
-      - name: Install missing packages
-        run: |
-          tlmgr update --self && tlmgr install --force --reinstall silence appendixnumberbeamer fira fontaxes mwe noto csquotes fontspec babel luatexja haranoaji haranoaji-extra --repository http://ftp.fau.de/ctan/systems/texlive/tlnet/
-      - name: Build minimal examples with pdfLaTeX
-        working-directory: minimal_examples/
-        run: |
-          ln -sf ../*.sty ./
-          ln -sf ../logos ./
-          latexmk -pdf -file-line-error -interaction=nonstopmode *.tex
-      - name: Remove pdfLaTeX results if compilation succeeds
-        working-directory: minimal_examples/
-        run: rm *.pdf
-      - name: Build minimal examples with LuaLaTeX
-        working-directory: minimal_examples/
-        run: |
-          ln -sf ../*.sty ./
-          ln -sf ../logos ./
-          latexmk -lualatex -file-line-error -interaction=nonstopmode *.tex
-      - name: Build multi-language examples with LuaLaTeX
-        working-directory: multi_lang_examples/
-        run: |
-          ln -sf ../*.sty ./
-          ln -sf ../logos ./
-          latexmk -lualatex -file-line-error -interaction=nonstopmode *.tex
-      - name: Build compare examples
-        working-directory: compare_examples/
-        run: |
-          ln -sf ../*.sty ./
-          ln -sf ../logos ./
-          latexmk -pdf -file-line-error -interaction=nonstopmode *example*.tex
-      - name: Build demo document
-        run: |
-          latexmk -pdf -file-line-error -interaction=nonstopmode beamertheme-pure-minimalistic-demo.tex
-      - name: PDFs to PNGs
-        uses: docker://frapsoft/fish:latest
-        with:
-          args: fish ./.github/workflows/convert_pdf_to_png.fish
-        if: github.event_name == 'push'
-      # HERE: Use simple cli logic, maybe script, to push documentation artifacts to external repo with access token
-      - name: Sync docs
-        uses: kai-tub/external-repo-sync-action@v1
-        with:
-          source-directory: "./"
-          include-patterns: "beamertheme-pure-minimalistic-demo.pdf *.png"
-          exclude-patterns: "*.tmp.png logos"
-          commit-message: "Updating LaTeX documentation files"
-        env:
-          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
-        if: github.event_name == 'push'
-  release:
-    name: Release new version
-    runs-on: ubuntu-latest
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - name: Run tests
+        run: nix flake check -L
+  publish:
+    name: Publish
     needs: build
-    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: startsWith(github.ref, 'refs/tags/')
     steps:
-      - name: Set up Git
-        uses: actions/checkout@v2
-      - name: Prepare repository
-        run: git fetch --unshallow --tags
-      - name: Run release script
-        run: bash auto_scripts/run_auto.sh
-        env:
-          # To be able to trigger next event
-          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+      # only execute if a new release is created
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - run: nix build .#documentation-artifacts
+      - uses: actions/checkout@v4
+        with:
+          repository: kai-tub/latex-beamer-pure-minimalistic.wiki.git
+          path: wiki
+      - run: |
+          echo "Copy documentation results to wiki"
+          cp -r ./result wiki/
+          cd wiki
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "update wiki"
+          echo "annotate release if release triggered the workflow"
+          git tag --annotate --message "Release" ${{ github.ref_name }}
+          git push
