@@ -64,7 +64,7 @@ export def "main create-montage demo" [
 ] {
   let tmp_dir = mktemp -d
   main convert-pdfs-to-pngs --src-dir $src_dir --target-dir $tmp_dir
-  ^montage ...(glob $"($tmp_dir)/*.png") -geometry +10+10 -tile 4x -background gray $"($target_dir)/beamertheme-pure-minimalistic-demo.png"
+  ^montage ...(glob $"($tmp_dir)/*.png" | sort --natural) -geometry +10+10 -tile 4x -background gray $"($target_dir)/beamertheme-pure-minimalistic-demo.png"
 
   rm -r $tmp_dir
 }
