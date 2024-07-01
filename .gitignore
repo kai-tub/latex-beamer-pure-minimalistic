@@ -1,5 +1,6 @@
 # cannot link to sty for windows support
 result
+.direnv
 minimal_examples/*.sty
 minimal_examples/*.pdf
 minimal_examples/logos

@@ -8,12 +8,14 @@ on:
       - "**.tex"
       - "**.yml"
       - "**.sty"
+      - "**.nix"
     branches: [ master ]
   pull_request:
     paths:
       - "**.tex"
       - "**.yml"
       - "**.sty"
+      - "**.nix"
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -67,6 +69,7 @@ jobs:
         with:
           args: fish ./.github/workflows/convert_pdf_to_png.fish
         if: github.event_name == 'push'
+      # HERE: Use simple cli logic, maybe script, to push documentation artifacts to external repo with access token
       - name: Sync docs
         uses: kai-tub/external-repo-sync-action@v1
         with:
