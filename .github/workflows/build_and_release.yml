@@ -32,11 +32,11 @@ jobs:
       - run: nix build .#documentation-artifacts
       - uses: actions/checkout@v4
         with:
-          repository: kai-tub/latex-beamer-pure-minimalistic.wiki.git
+          repository: kai-tub/latex-beamer-pure-minimalistic.wiki
           path: wiki
       - run: |
           echo "Copy documentation results to wiki"
-          cp -r ./result wiki/
+          install --mode=666 ./result wiki/
           cd wiki
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -45,3 +45,30 @@ jobs:
           echo "annotate release if release triggered the workflow"
           git tag --annotate --message "Release" ${{ github.ref_name }}
           git push
+                - name: Create archives
+      # Add to release
+      - run: |
+          mkdir -p beamertheme-pure-minimalistic
+          install --mode=666 {*.sty,beamertheme-pure-minimalistic-demo.tex,./result/beamertheme-pure-minimalistic-demo.pdf,README.md,LICENSE,demo_bib.bib} beamertheme-pure-minimalistic/
+          cp -r logos beamertheme-pure-minimalistic/
+          zip -r beamertheme-pure-minimalistic.zip beamertheme-pure-minimalistic
+          tar cfvz beamertheme-pure-minimalistic.tar.gz beamertheme-pure-minimalistic
+      - name: Upload zip asset
+        uses: actions/upload-release-asset@v4
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: ./beamertheme-pure-minimalistic.zip
+          asset_name: beamertheme-pure-minimalistic.zip
+      - name: Upload tar.gz asset
+        uses: actions/upload-release-asset@v4
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: ./beamertheme-pure-minimalistic.tar.gz
+          asset_name: beamertheme-pure-minimalistic.tar.gz
+      - name: Upload beamertheme-pure-minimalistic-demo.pdf
+        uses: actions/upload-release-asset@v4
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: beamertheme-pure-minimalistic/beamertheme-pure-minimalistic-demo.pdf
+          asset_name: beamertheme-pure-minimalistic-demo.pdf
+

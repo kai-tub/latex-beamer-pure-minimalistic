@@ -4,11 +4,9 @@
 [![Release](https://badgen.net/github/release/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases)
 [![GitHub license](https://badgen.net/github/license/kai-tub/latex_beamer_pure_minimalistic/)](https://github.com/kai-tub/latex_beamer_pure_minimalistic/blob/master/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?color=blue)](CODE_OF_CONDUCT.md)
-[![GitHub Dicussions](https://badgen.net/badge/GitHub%20Discussions/Enabled?color=blue&icon=github)](https://github.com/kai-tub/latex-beamer-pure-minimalistic/discussions)
+<img alt="Powered by nix" src="https://img.shields.io/badge/Powered%20By-Nix-blue?style=flat&logo=snowflake">
 
-![Build and Release](https://github.com/kai-tub/latex-beamer-pure-minimalistic/workflows/Build%20and%20Release/badge.svg)
-![Upload Assets](https://github.com/kai-tub/latex-beamer-pure-minimalistic/workflows/Upload%20Assets/badge.svg)
-[![Auto Release](https://img.shields.io/badge/release-auto.svg?colorA=888888&colorB=9B065A&label=auto&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACzElEQVR4AYXBW2iVBQAA4O+/nLlLO9NM7JSXasko2ASZMaKyhRKEDH2ohxHVWy6EiIiiLOgiZG9CtdgG0VNQoJEXRogVgZYylI1skiKVITPTTtnv3M7+v8UvnG3M+r7APLIRxStn69qzqeBBrMYyBDiL4SD0VeFmRwtrkrI5IjP0F7rjzrSjvbTqwubiLZffySrhRrSghBJa8EBYY0NyLJt8bDBOtzbEY72TldQ1kRm6otana8JK3/kzN/3V/NBPU6HsNnNlZAz/ukOalb0RBJKeQnykd7LiX5Fp/YXuQlfUuhXbg8Di5GL9jbXFq/tLa86PpxPhAPrwCYaiorS8L/uuPJh1hZFbcR8mewrx0d7JShr3F7pNW4vX0GRakKWVk7taDq7uPvFWw8YkMcPVb+vfvfRZ1i7zqFwjtmFouL72y6C/0L0Ie3GvaQXRyYVB3YZNE32/+A/D9bVLcRB3yw3hkRCdaDUtFl6Ykr20aaLvKoqIXUdbMj6GFzAmdxfWx9iIRrkDr1f27cFONGMUo/gRI/jNbIMYxJOoR1cY0OGaVPb5z9mlKbyJP/EsdmIXvsFmM7Ql42nEblX3xI1BbYbTkXCqRnxUbgzPo4T7sQBNeBG7zbAiDI8nWfZDhQWYCG4PFr+HMBQ6l5VPJybeRyJXwsdYJ/cRnlJV0yB4ZlUYtFQIkMZnst8fRrPcKezHCblz2IInMIkPzbbyb9mW42nWInc2xmE0y61AJ06oGsXL5rcOK1UdCbEXiVwNXsEy/6+EbaiVG8eeEAfxvaoSBnCH61uOD7BS1Ul8ESHBKWxCrdyd6EYNKihgEVrwOAbQruoytuBYIFfAc3gVN6iawhjKyNCEpYhVJXgbOzARyaU4hCtYizq5EI1YgiUoIlT1B7ZjByqmRWYbwtdYjoWoN7+LOIQefIqKawLzK6ID69GGpQgwhhEcwGGUzfEPAiPqsCXadFsAAAAASUVORK5CYII=)](https://github.com/intuit/auto)
+<img alt="Tests Status Badge" src="https://github.com/kai-tub/latex-beamer-pure-minimalistic/actions/workflows/build_and_release.yml/badge.svg">
 
 
 A presentation theme for LaTeX-Beamer that is truly
@@ -87,16 +85,16 @@ theme and the pure minimalistic beamer theme
 (inspired by the [auriga beamer theme](https://github.com/anishathalye/auriga)):
 
 ## Dark mode
-On the [left](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png)
+On the [left](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/comparison_dark.png)
 is the pure minimalistic theme in dark mode,
-and on the [right](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png) is the default beamer theme.
-![comparison-dark](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_dark.png)
+and on the [right](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/comparison_dark.png) is the default beamer theme.
+![comparison-dark](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/comparison_dark.png)
 
 ## Light mode
-On the [left](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_light.png) is the pure minimalistic theme in light mode,
-and on the [right](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_light.png) is the default beamer theme.
+On the [left](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/comparison_light.png) is the pure minimalistic theme in light mode,
+and on the [right](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/comparison_light.png) is the default beamer theme.
 
-![comparison-light](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/compare_examples/comparison_light.png)
+![comparison-light](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/comparison_light.png)
 
 # Download
 Download the latest release by going to the [release page](https://github.com/kai-tub/latex_beamer_pure_minimalistic/releases).
@@ -125,11 +123,11 @@ For a quick guide on how to use _non-latin scripts_ and
 multiple languages in one document see the
 following [multi-language README](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md).
 
-[Here](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/multi_lang_examples/lang_comparison.png) are some examples for a _right-to-left_ language (Arabic),
+[Here](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/lang_comparison.png) are some examples for a _right-to-left_ language (Arabic),
 a _standard_ non-latin script (Greek) and a language with special
 typographical requirements (Japanese):
 
-[![multi-lang-examples](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/multi_lang_examples/lang_comparison.png)](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md)
+[![multi-lang-examples](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/lang_comparison.png)](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md)
 
 # Customize
 
@@ -166,9 +164,9 @@ with:
   [width=.15\linewidth]{alternative_logo/console.png}}
 ```
 
-![alternative-title-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/alternative_title_logo.png)
+![alternative-title-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/alternative_title_logo-00.png)
 
-![alternative-header-footer-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/alternative_header_footer_logo.png)
+![alternative-header-footer-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/alternative_header_footer_logo-00.png)
 
 ## Color
 The theme includes two default color options.
@@ -206,14 +204,14 @@ could be used:
 \renewcommand{\beamertitlecolor}{title}
 ```
 
-![custom-color](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/custom_color.png)
+![custom-color](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/custom_color-00.png)
 
 ## Fonts
 The default fonts are the [Fira Fonts](https://bboxtype.com/typefaces/FiraSans/#!layout=specimen).
 This decision was inspired by another awesome beamer theme,
 the [Focus beamer theme](https://github.com/elauksap/focus-beamertheme).
 
-![fira-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/fira_font.png)
+![fira-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/fira_font-00.png)
 
 Some dislike the Fira Fonts. As an alternative, this
 theme also integrates the *Noto* fonts.
@@ -224,7 +222,7 @@ To use the Noto fonts:
 \usetheme[noto, darkmode]{pureminimalistic}
 ```
 
-![noto-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/noto_font.png)
+![noto-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/noto_font-00.png)
 
 If you prefer the default fonts _or_ load custom fonts, disable the Fira Fonts with:
 
@@ -232,7 +230,7 @@ If you prefer the default fonts _or_ load custom fonts, disable the Fira Fonts w
 \usetheme[customfont, darkmode]{pureminimalistic}
 ```
 
-![default-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/default_font.png)
+![default-fonts](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/default_font-00.png)
 
 For more information on how to load the custom fonts or
 use multiple languages in a document, see the [multi-language README](https://github.com/kai-tub/latex-beamer-pure-minimalistic/tree/master/multi_lang_examples/README.md).
@@ -252,7 +250,7 @@ To show the maximum number of slides, enable the
 \usetheme[showmaxslides, darkmode]{pureminimalistic}
 ```
 
-![show-max-slides](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/show_max_slides.png)
+![show-max-slides](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/show_max_slides-00.png)
 
 **Disable footer**
 
@@ -263,7 +261,7 @@ set the `nofooter` option:
 \usetheme[nofooter, darkmode]{pureminimalistic}
 ```
 
-![no-footer](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/no_footer.png)
+![no-footer](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/no_footer-00.png)
 
 **Replace footer logo with page count**
 
@@ -273,7 +271,7 @@ to that position use the `nofooterlogo` option:
 \usetheme[nofooterlogo, darkmode]{pureminimalistic}
 ```
 
-![no-footer-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/no_footer_logo.png)
+![no-footer-logo](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/no_footer_logo-00.png)
 
 **Customize word for Page in footer**
 
@@ -282,7 +280,7 @@ To change the word _Page_ in the footer, define a different word with:
 \renewcommand{\pageword}{Seite}
 ```
 
-![custom-page-word](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/custom_page_word.png)
+![custom-page-word](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/custom_page_word-00.png)
 
 # Extras
 This theme also provides a new environment `vfilleditems`.
@@ -297,7 +295,7 @@ on the remaining space. Use it with:
 \end{vfilleditems}
 ```
 
-![vfilleditems](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/minimal_examples/vfilleditems.png)
+![vfilleditems](https://raw.githubusercontent.com/wiki/kai-tub/latex-beamer-pure-minimalistic/vfilleditems-00.png)
 
 # Release status
 The next steps and thoughts about the upcoming release
